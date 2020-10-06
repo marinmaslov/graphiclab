@@ -14,6 +14,6 @@ This branch contains the newest/latest code. The code isn't necessarily stable (
 
 ## 🏷️ Tags
 
-LAST_SYNC - will be set on commits where last merge with production occured 
+**LAST_SYNC** - will be set on commits where last merge with production occured 
 
 Gatsby app created by Marin Maslov & Ante Turić for HCI course @ [FESB (UNIST)](https://www.fesb.unist.hr/)
