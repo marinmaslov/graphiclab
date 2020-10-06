@@ -22,4 +22,6 @@ This branch contains the latest stable code (e.g. working code without errors). 
 
 🍭 **Design** - Here you can find the Low and High Fidelity designs for the app
 
+<p align="center">
 Gatsby app created by Marin Maslov & Ante Turić for HCI course @ [FESB (UNIST)](https://www.fesb.unist.hr/)
+</p>
