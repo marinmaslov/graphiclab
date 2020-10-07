@@ -25,5 +25,5 @@ This branch contains the latest stable code (e.g. working code without errors). 
 <br>
 <br>
 <p align="center">
-Gatsby app created by Marin Maslov & Ante Turić for HCI course @ [FESB (UNIST)](https://www.fesb.unist.hr/)
+Gatsby app created by Marin Maslov & Ante Turić for HCI course @ <a href="https://www.fesb.unist.hr/">FESB (UNIST)</a>
 </p>
