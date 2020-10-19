@@ -1,9 +1,11 @@
 import React from "react"
 
 const NotFoundPage = () => (
-    <h1>
-      404: Not Found
-    </h1>
+  <div>
+    <h1>ayy... nothing here!</h1>
+    <p>You just hit a route that doesn&#39;t exist...
+    the sadness.</p>
+  </div>
 )
 
 export default NotFoundPage
