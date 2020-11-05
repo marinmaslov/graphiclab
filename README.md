@@ -5,8 +5,10 @@
   🏷️ The main branches are:
 </h5>
 <h3 align="center">
-  🌐 master, 👨🏼‍💻 Development & 🍭 Design
+  🌐 master, 👨🏼‍💻 development & 🍭 Design
 </h3>
+
+<br>
 
 ## 💡 Purpose
 
@@ -22,13 +24,15 @@ This branch contains the newest/latest code. The code isn't necessarily stable (
 
 This branch contains the Low and High Fidelity page designs. Each file listed in the low_fidelity direcotry below contains two designs: one for the 🖥️ desktop and one for the 📱 mobile version of the app's pages. The the high_fidelity direcotry is further divided into subdirectories, with names matching the app's pages, containing the 🖥️ desktop and 📱 mobile designs.
 
-## 🏷️ Other branches
+<br>
 
 ## 🏷️ Other branches
 
 👨‍💻 **labs-turic** - Here you can find the exercises from the HCI crash course done by A. Turic
 
 👨‍💻 **labs-maslov** - Here you can find the exercises from the HCI crash course done by M. Maslov
+
+<br>
 
 ## 🧐 What's inside?
 
@@ -74,7 +78,7 @@ A quick look at the apps files and directories.
     └── README.md
 
 <br>
-<br>
+
 <p align="center">
 Gatsby app created by Marin Maslov & Ante Turić for HCI course @ [FESB (UNIST)](https://www.fesb.unist.hr/)
 </p>
