@@ -74,7 +74,7 @@ A quick look at the apps files and directories.
     |       └── pages_08_about
     |               |── About Desktop (img)
     |               └── About Mobile (img)
-    ├── src (here is where the App lives)
+    ├── graphiclab (here is where the App lives)
     └── README.md
 
 <br>
