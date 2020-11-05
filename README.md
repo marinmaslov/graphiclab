@@ -18,7 +18,7 @@ This branch contains the latest stable code (e.g. working code without errors). 
 
 ### 👨🏼‍💻 Development
 
-This branch contains the newest/latest code. The code isn't necessarily stable (e.g. working properly). Once developers submitted enough commits and test them all, this branch will be merged with the production one (so that it will contain the latest stable code).
+This branch contains the newest/latest code. The code isn't necessarily stable (e.g. working properly). Once developers submitted enough commits and test them all, this branch will be merged into the master one (so that it will contain the latest stable code).
 
 ### 🍭 Design
 
