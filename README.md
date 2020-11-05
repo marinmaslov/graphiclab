@@ -5,7 +5,7 @@
   🏷️ The main branches are:
 </h5>
 <h3 align="center">
-  🌐 master, 👨🏼‍💻 development & 🍭 Design
+  🌐 master, 👨🏼‍💻 development & 🍭 design
 </h3>
 
 <br>
