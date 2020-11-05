@@ -12,9 +12,9 @@
 
 ## 💡 Purpose
 
-### 🌐 Production
+### 🌐 Master
 
-This branch contains the latest stable code (e.g. working code without errors). Once the code on the development branch is tested it can be merged into production.
+This branch contains the latest stable code (e.g. working code without errors). Once the code on the development branch is tested it can be merged into master.
 
 ### 👨🏼‍💻 Development
 
