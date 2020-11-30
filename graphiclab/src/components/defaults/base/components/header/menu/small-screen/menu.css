@@ -1,0 +1,80 @@
+.show {
+    display: unset;
+}
+
+.hide {
+    display: unset;
+}
+
+#mobile-menu {
+    position: fixed;
+    background: #363d4a;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    z-index: 999;
+}
+
+#mobile-menu .content {
+    margin: 10vh 20px;
+    text-align: center;
+}
+
+#mobile-menu .content .menu-item {
+    color: #fff;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+#mobile-menu .content .menu-item:hover {
+    text-decoration: underline;
+}
+
+#mobile-menu .content .menu-item p {
+    margin: 10px 2vh;
+}
+
+#mobile-menu .content .menu-item p i {
+    margin-right: 10px;
+}
+
+#mobile-menu .content .shop {
+    background: #f67280;
+    padding: 10px 20px;
+    border-radius: 20px;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+#mobile-menu .content .shop:hover {
+    background: #d5636f;
+    opacity: 1;
+}
+
+#mobile-menu .content .login {
+    background: #f8b195;
+    padding: 10px 20px;
+    border-radius: 20px;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+
+#mobile-menu .content .login:hover {
+    background: #d88868;
+    opacity: 1;
+}
+
+.mobile-menu-icon {
+    color: #fff;
+    font-size: 1.5em;
+    margin: auto 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.mobile-menu-icon:hover {
+    opacity: 0.7;
+}
