@@ -5,11 +5,11 @@ import React from "react"
 
 import "./header.css"
 
-import Logo from "../header/components/logo"
-import Menu from "../header/components/menu"
-import SmallMenu from "../header/components/small-menu"
+import Logo from "./logo/logo"
+import Menu from "./menu/wide-screen/menu"
+import SmallMenu from "./menu/small-screen/menu"
 
-import useWindowSize from "../header/components/useWindowSize"
+import useWindowSize from "./menu/resizer/resizer"
 
 const Header = ({ }) => {
     const { width } = useWindowSize()

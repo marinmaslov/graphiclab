@@ -3,7 +3,7 @@
  */
 import React from "react"
 
-import Logo from "../../../../images/logo/logo.png"
+import Logo from "../../../../../../images/logo/logo.png"
 
 const MainLogo = ({ }) => {
     return (
