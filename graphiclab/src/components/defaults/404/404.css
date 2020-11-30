@@ -1,0 +1,127 @@
+/* Page 404 */
+#page-not-found {
+    margin: auto 250px;
+    padding: 200px 30px 80px 30px;
+}
+
+#page-not-found .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#page-not-found .container .image-1 {
+    background: url(../../../images/stickers/sticker_006.png);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    height: 300px;
+    width: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#page-not-found .container .content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#page-not-found .container .content h2 {
+    font-size: 5em;
+    margin: 0;
+}
+
+#page-not-found .container .content h3 {
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+#page-not-found .container .content p {
+    font-size: 1em;
+    padding: 0 40px;
+}
+
+#page-not-found .container .content a {
+    background: #f67280;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #fff;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+    margin: 20px auto;
+}
+
+#page-not-found .container .content a:hover {
+    background: #d5636f;
+}
+
+#page-not-found .container .content i {
+    margin-right: 10px;
+}
+
+
+#page-not-found .container .image-2 {
+    background: url(../../../images/stickers/sticker_005.png);
+    
+    height: 300px;
+    width: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#page-not-found .alien {
+    position: absolute;
+    background: url(../../../images/stickers/sticker_007.png);
+    /* transform: rotate(90deg); */
+    height: 100px;
+    width: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: -1;
+    margin-right: -100px;
+    -webkit-animation: moveUpDown 4s infinite  normal ease-out;
+    animation: moveUpDown 4s infinite  normal ease-out;
+}
+
+@-webkit-keyframes moveUpDown {
+    0% {
+        right: 0px;
+    }
+    50% {
+        right: 150px;
+    }
+    100% {
+        right: 0px;
+    }
+}
+
+@keyframes moveUpDown {
+    0% {
+        right: 0px;
+    }
+    50% {
+        right: 150px;
+    }
+    100% {
+        right: 0px;
+    }
+}
+
+@media only screen and (max-width: 1100px) {
+    #page-not-found .alien {
+        display: none;
+    }
+    #page-not-found {
+        margin: auto 50px!important;
+        padding: 160px 30px 80px 30px!important;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #page-not-found {
+        margin: auto 10px!important;
+    }
+    #page-not-found .container .image-1, #page-not-found .container .image-2 {
+        display: none;
+    }
+}
+/* Page 404 ---END */
