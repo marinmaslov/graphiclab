@@ -5,7 +5,10 @@
 import React from "react"
 import Helmet from "react-helmet"
 
+import "./base.css"
+
 import Header from "./components/header/header"
+import Footer from "./components/footer/footer"
 
 const Base = ({ children }) => {
   return (
@@ -16,6 +19,7 @@ const Base = ({ children }) => {
         </Helmet>
         <Header/>
         <main>{children}</main>
+        <Footer/>
     </>
   )
 }

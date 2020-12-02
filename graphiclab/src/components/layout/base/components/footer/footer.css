@@ -1,0 +1,166 @@
+/* Footer --- START */
+footer {
+    background: #363d4a;
+}
+
+footer .section {
+    width: 33.33%;
+}
+
+.copyright {
+    text-align: center;
+    padding: 0 0 30px 0;
+}
+
+.copyright h2 {
+    font-size: 1.2em;
+    color: #fff;
+}
+
+.copyright p {
+    font-size: .8em;
+    color: #afb1b7;
+}
+
+.image {
+    background: url("../../../../../images/stickers/sticker_004.png");
+    position: absolute;
+    height: 300px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: -350px 0 0 40px;
+    padding: 0 0 0 300px;
+}
+
+@media only screen and (max-width: 1130px) {
+    .image {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .copyright {
+        padding: 20px;
+    }
+}
+/* Footer --- END */
+
+/* Highlights --- START */
+.highlight {
+    background: #565a63;
+    z-index: 99;
+}
+
+.highlight .container {
+    display: flex;
+    margin: auto 150px;
+    padding: 20px 0;
+    justify-content: space-evenly;
+}
+
+.highlight .container .card {
+    text-align: center;
+    color: #acaeb1;
+    display: flex;
+    flex-direction: column;
+}
+
+.highlight .container .card i {
+    font-size: 2em;
+    padding: 3px 5px;
+}
+
+.highlight .container .card div {
+    padding: 5px;
+}
+
+.highlight .container .card h2 {
+    font-size: 1em;
+    margin: 0;
+}
+
+.highlight .container .card p {
+    font-size: .6em;
+    margin: 0;
+}
+
+@media only screen and (max-width: 900px) {
+    .highlight .container {
+        margin: auto 20px;
+    }
+    .highlight .container .card i {
+        font-size: 1.2em;
+        padding: 3px 5px;
+    }
+    .highlight .container .card h2 {
+        font-size: .8em;
+    }
+    .highlight .container .card p {
+        font-size: .5em;
+    }
+}
+/* Highlights --- END */
+
+/* Social --- START */
+.social-box {
+    text-align: center;
+    padding: 40px 0;
+    font-size: 2em;
+}
+
+.social-box a {
+    color: #afb1b7;
+    margin: 0 2px 0 2px;
+    transition: all .2s ease-in-out;
+}
+
+.social-box a:hover  {
+    color: #fff;
+}
+/* Social --- END */
+
+/* Urls --- START */
+.urls{
+    display: flex;
+    justify-content: space-around;
+    margin: auto 60vh;
+    color: #fff;
+    text-align: center;
+    padding: 40px 0;
+}
+
+.urls h3 i{
+    margin-right: 10px;
+}
+
+.urls a{
+    color: #fff;
+    text-decoration: none;
+    font-size: .8em;
+    transition: all .2s ease-in-out;
+}
+
+.urls a:hover{
+    color: #afb1b7;
+}
+
+@media only screen and (max-width: 1130px) {
+    .urls {
+        margin: auto 20vh!important;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .urls {
+        flex-direction: column!important;
+        justify-content: center!important;
+        margin: auto!important;
+    }
+    footer .section {
+        width: 100%!important;
+    }
+    .image {
+        display: none;
+    }
+}
+/* Urls --- END */
