@@ -3,7 +3,7 @@
 }
 
 .hide {
-    display: unset;
+    display: none;
 }
 
 #mobile-menu {
