@@ -25,7 +25,7 @@ export default class SmallMenu extends React.Component {
     }
 
     render() {
-        const { isOpen } = this.state
+        const { isOpen } = this.state.isOpen
         return (
             <>
                 <p className={`mobile-menu-icon ${this.state.isOpen ? "hide" : "show"}`} onClick={this.handleMenuButtonClick}><i class="fas fa-bars"></i></p>

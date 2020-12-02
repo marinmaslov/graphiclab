@@ -2,9 +2,9 @@
  * Container layout component 
  *
  */
-
 import React from "react"
-import Helmet from "react-helmet"
+
+import "./container.css"
 
 const Container = ({ children }) => {
   return (
