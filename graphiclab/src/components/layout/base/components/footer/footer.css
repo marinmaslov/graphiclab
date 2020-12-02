@@ -99,6 +99,12 @@ footer .section {
         font-size: .5em;
     }
 }
+
+@media only screen and (max-width: 700px) {
+    .highlight .container .card p {
+        display: none;
+    }
+}
 /* Highlights --- END */
 
 /* Social --- START */
