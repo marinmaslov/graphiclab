@@ -1,0 +1,117 @@
+/* Header */
+#header {
+    background: #363d4a;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+}
+
+#header .container {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    padding: 20px 0;
+    max-width: 1200px;
+}
+
+#header .logo {
+    color: #fff;
+    display: flex;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+#header .logo:hover {
+    opacity: .8;
+}
+
+#header .logo img {
+    height: 40px;
+}
+
+#header .logo span {
+    font-size: 1.6em;
+    padding: 5px 15px;
+}
+
+#header .nav {
+    display: flex;
+    justify-content: flex-end;
+    
+}
+
+#header .nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+#header .nav ul:first-child li {
+    padding: 10px 0 10px 30px;
+}
+
+#header .nav ul:last-child li:first-child {
+    padding: 10px 0 10px 30px;
+}
+
+#header .nav ul:last-child li:last-child {
+    padding: 10px 0 10px 10px;
+}
+
+#header .nav li a {
+    color: #fff;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+
+#header .nav li a:hover {
+    opacity: .8;
+}
+
+#header .nav li a i {
+    margin: 0 10px 0 0;
+}
+
+
+#header .nav .shop {
+    background: #f67280;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all .2s ease-in-out;
+}
+
+#header .nav .shop:hover {
+    background: #d5636f;
+    opacity: 1;
+}
+
+#header .nav .login {
+    background: #f8b195;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all .2s ease-in-out;
+}
+
+#header .nav .login:hover {
+    background: #d88868;
+    opacity: 1;
+}
+
+
+/* Header ---END */
+@media only screen and (max-width: 1250px) {
+    #header .logo {
+        margin-left: 20px;
+    }
+    #header .nav {
+        margin-right: 20px;
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    #header .logo {
+        margin-left: 20px;
+    }
+}
