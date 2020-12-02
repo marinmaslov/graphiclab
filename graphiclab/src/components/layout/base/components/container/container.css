@@ -1,0 +1,38 @@
+/* Container --- START */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 40px;
+}
+
+.container .content {
+    padding: 60px 0;
+}
+
+.container .content h2 {
+    font-size: 2.4em;
+}
+
+.container .content p {
+    font-size: 1.1em;
+}
+
+.container .content i {
+    margin-right: 10px;
+}
+
+.leafelet-map {
+    height: 400px;
+    width: 100%;
+}
+
+.leaflet-control-zoom {
+    display: none;
+}
+
+@media only screen and (max-width: 900px) {
+    .container .content {
+        padding: 20px 30px;
+    }
+}
+/* Container --- END */

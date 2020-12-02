@@ -1,4 +1,4 @@
-/* Header */
+/* Header --- START */
 #header {
     background: #363d4a;
     width: 100%;
@@ -73,7 +73,6 @@
     margin: 0 10px 0 0;
 }
 
-
 #header .nav .shop {
     background: #f67280;
     padding: 10px 20px;
@@ -98,8 +97,6 @@
     opacity: 1;
 }
 
-
-/* Header ---END */
 @media only screen and (max-width: 1250px) {
     #header .logo {
         margin-left: 20px;
@@ -109,9 +106,9 @@
     }
 }
 
-
 @media only screen and (max-width: 900px) {
     #header .logo {
         margin-left: 20px;
     }
 }
+/* Header --- END */

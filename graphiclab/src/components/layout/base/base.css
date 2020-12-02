@@ -1,0 +1,15 @@
+/* Base --- START */
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    color: #363d4a;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+:focus{
+    outline:none;
+}
+/* Base --- END */
