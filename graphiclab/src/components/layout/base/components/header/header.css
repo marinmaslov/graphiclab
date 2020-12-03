@@ -48,15 +48,19 @@
 }
 
 #header .nav ul:first-child li {
-    padding: 10px 0 10px 30px;
+    padding: 10px 5px;
 }
 
 #header .nav ul:last-child li:first-child {
-    padding: 10px 0 10px 30px;
+    padding: 10px 0 10px 5px;
 }
 
 #header .nav ul:last-child li:last-child {
     padding: 10px 0 10px 10px;
+}
+
+#header .nav ul:first-child li a {
+    padding: 10px 10px;
 }
 
 #header .nav li a {
