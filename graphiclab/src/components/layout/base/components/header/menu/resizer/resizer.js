@@ -1,9 +1,18 @@
 import React from "react";
 
+let defaultHeight
+let defaultWidth
+
+if (typeof window !== `undefined`) {
+  defaultHeight = window.innerHeight
+  defaultWidth = window.innerWidth
+}
+
 export default function useWindowSize() {
+
     const [windowSize, setWindowSize] = React.useState({
-        width: window.innerWidth,
-        height: window.innerHeight,
+        width: defaultWidth,
+        height: defaultHeight,
     });
 
     function changeWindowSize() {
@@ -14,7 +23,7 @@ export default function useWindowSize() {
         window.addEventListener("resize", changeWindowSize);
 
         return () => {
-        window.removeEventListener("resize", changeWindowSize);
+            window.removeEventListener("resize", changeWindowSize);
         };
     }, []);
 
