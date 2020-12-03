@@ -1,7 +1,7 @@
 /* Page 404 */
 #page-not-found {
     margin: auto 250px;
-    padding: 200px 30px 80px 30px;
+    padding: 20px 30px 20px 30px;
 }
 
 #page-not-found .container {
@@ -77,7 +77,7 @@
     background-size: contain;
     background-repeat: no-repeat;
     z-index: -1;
-    margin-right: -100px;
+    margin-right: -160px;
     -webkit-animation: moveUpDown 4s infinite  normal ease-out;
     animation: moveUpDown 4s infinite  normal ease-out;
 }
@@ -87,7 +87,7 @@
         right: 0px;
     }
     50% {
-        right: 150px;
+        right: 120px;
     }
     100% {
         right: 0px;
