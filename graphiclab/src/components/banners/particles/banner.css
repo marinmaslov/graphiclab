@@ -1,0 +1,131 @@
+/* Banner */
+#banner {
+    background-image: linear-gradient( 89.5deg,  rgba(246,114,128,1) 0.2%, rgba(248,177,149,1) 90.6% );
+    padding: 80px 0 0 0;
+}
+
+#tsparticles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: -80px 0 0 0;
+}
+
+#banner .container {
+    display: flex;
+    justify-content: space-between;
+    margin: -80px auto auto;
+    padding: 30vh 50px 20vh;
+    height: 50vh;
+    max-width: 1200px;
+}
+
+#banner .container .text {
+    color: #fff;
+    z-index:99;
+    width: 60%;
+    padding: 50px 0;
+}
+
+#banner .container .text h2 {
+    font-size: 3em;
+    margin: 0 0 .3em 0;
+}
+
+#banner .container .carousel {
+    z-index:99;
+    display:flex;
+    flex-direction: column;
+    /* width: 40%; */
+    color:#fff;
+}
+
+#banner .container .carousel img {
+    max-height: 300px;
+    width: auto;
+    margin: auto;
+}
+
+#banner .container .carousel span {
+    font-size: 1em;
+    margin: 20px auto;
+}
+
+#banner .container .carousel .navigation {
+    display: flex;
+    justify-content: center;
+}
+
+#banner .container .carousel .navigation i {
+    margin:0 5px;
+    opacity: 1;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+#banner .container .carousel .navigation i:first-child:hover, #banner .container .carousel .navigation i:last-child:hover {
+    opacity: .7;
+}
+
+#banner .container .carousel .navigation .dot-change:hover:before {
+    content: "\f192";
+}
+
+
+#banner .buttons button {
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: all .2s ease-in-out;
+    color: #363d4a;
+    cursor: pointer;
+    border: none;
+    font-size: 1.2em;
+    margin: 0 5px 0 0;
+}
+
+#banner .buttons button i {
+    margin: 0 10px 0 0;
+}
+
+#banner .buttons button:hover {
+    opacity: .8;
+}
+
+
+/* Banner ---   END */
+@media only screen and (max-width: 1000px) {
+    .desktop-particles {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 900px) {
+    #banner {
+        margin-bottom: 12em;
+    }
+    #banner .container {
+        margin: -180px auto!important;
+        /* padding: 180px 20px 30px!important; */
+        padding: 40vh 50px 20vh!important;
+        height: unset!important;
+        flex-direction: column-reverse!important;
+    }
+
+    #banner .container .text {
+        width: 100%!important;
+    }
+    #banner .container .carousel {
+        width: 100%!important;
+    }
+    #banner .buttons {
+        text-align: left!important;
+    }
+    #banner .buttons button {
+        font-size: 1em!important;
+    }
+    #banner .carousel img {
+        /* max-height: 240px!important; */
+    }
+}
