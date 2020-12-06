@@ -29,7 +29,7 @@ export default class Blog extends React.Component {
             <>
             <Layout isContainer={false}>
                 {isFirst && (
-                    <Banner image={image} headline={headline} paragraph={parahraph}/>
+                    <Banner name="blog" />
                 )}
 
                 {!isFirst && (

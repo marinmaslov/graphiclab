@@ -4,13 +4,9 @@ import Layout from "../components/layout/base/base"
 import Banner from "../components/banners/custom/banner"
 import Container from "../components/layout/base/components/container/container"
 
-const image = "privacy-image"
-const headline = "We care about your privacy"
-const paragraph = "We're not even using cookies."
-
 const PrivacyPolicyPage = () => (
   <Layout isContainer={false}>
-    <Banner image={image} headline={headline} paragraph={paragraph}/>
+    <Banner name="privacy-policy"/>
     <Container>
         <h2>Privacy Policy</h2>
         <p>GraphicLab Inc., based in Split, Croatia, ("GraphicLab", "we") is a technology company. GraphicLab provides a brand management software as a service (“Service”) to private and enterprise customers, and operates graphiclab.com.</p>

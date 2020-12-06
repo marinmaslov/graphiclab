@@ -4,13 +4,9 @@ import Layout from "../components/layout/base/base"
 import Container from "../components/layout/base/components/container/container"
 import Banner from "../components/banners/custom/banner"
 
-const image = "about-image"
-const headline = "About us"
-const paragraph = "Welcome to the dark side. We have cookies."
-
 const AboutPage = () => (
     <Layout isContainer={false}>
-        <Banner image={image} headline={headline} paragraph={paragraph}/>
+        <Banner name="about" />
         <Container>
             <h2>About us</h2>
             <p>Powerful, user-friendly and globally accessible, Fotor is an online photo editing suite, utilizing exclusive technology to bring an unprecedented level of editing control to anyone and everyone. While the ‘collage’ and ‘edit’ features are already enjoyed by millions of users, daily, the new ‘design’ feature gives the common user the ability to design any form of graphics and cover, limited only by imagination.</p>
