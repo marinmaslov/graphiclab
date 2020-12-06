@@ -1,0 +1,385 @@
+#blog-cards {
+    max-width: 1200px;
+    margin: auto;
+}
+
+#blog-filter .active {
+    text-decoration: underline;
+}
+
+.hide {
+    display: none;
+}
+
+#blog-filter {
+    background: #e5e5e5;
+    padding: 20px 10px;
+    color: #363d4a;
+}
+
+#blog-filter h3 {
+    font-size: 0.9em;
+    text-align: center;
+    margin: 0;
+    font-weight: normal;
+}
+
+#blog-filter .categories {
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    font-weight: bold;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+#blog-filter .categories a {
+    margin-right: 20px;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    color: #363d4a;
+    text-decoration: none;
+}
+
+#blog-filter .categories a:last-child {
+    margin-right: 0;
+}
+
+#blog-filter .categories a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+#blog-filter .categories a:active, #blog-filter .categories a:fisited {
+    color: #363d4a;
+}
+
+#blog-filter .categories .underline {
+    text-decoration: underline;
+}
+
+#blog-filter .divider {
+    display: flex;
+    margin: 20px auto;
+    max-width: 300px;
+}
+
+#blog-filter .divider hr {
+    width: 20%;
+    border: 1px solid #363d4a;
+    background: #363d4a;
+}
+
+#blog-filter .divider i {
+    color: #363d4a;
+}
+
+#blog-search {
+    background: #dbdbdb;
+    border-top: 1px solid #d1d1d1;
+    border-bottom: 1px solid #d1d1d1;
+    padding: 30px;
+}
+
+#blog-search {
+    display: flex;
+    justify-content: center;
+}
+
+#blog-search .search-container {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+}
+
+#blog-search .search-container input {
+    text-align: center;
+    background: none;
+    border: none;
+    font-size: 1.2em;
+    color: rgba(54, 61, 74, .8);
+}
+
+#blog-search .search-container input::placeholder {
+    color: rgba(54, 61, 74, .8);
+    opacity: 0.8;
+}
+
+.green {
+    background: #b5e082!important;
+}
+
+.red {
+    background: #e08282!important;
+}
+
+#no-result-container {
+    padding: 30px 50px;
+    text-align: center;
+ }
+
+#no-result-container img {
+    width: 320px;
+    height: auto;
+}
+
+#no-result-container p {
+    font-size: 2em;
+}
+
+
+#blog-tag-page {
+    padding: 90px 20px 10px;
+    text-align: center;
+    background: #e5e5e5;
+}
+
+#blog-tag-page h3 {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+#blog-tag-page h3 span {
+    color: #d4515f;
+}
+
+#blog-tag-page h4 {
+    font-size: 1em;
+    margin: 0 0 -10px 0;
+}
+
+
+
+
+
+
+/* BLOG CARDS */
+#blog-cards {
+    max-width: 900px;
+    color: #363d4a;
+    padding: 30px 0;
+}
+
+#blog-cards article {
+    margin: 20px 0;
+    padding: 20px;
+}
+
+#blog-cards article h2 a {
+    font-size: 2em;
+    font-weight: bold;
+    color: #363d4a;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+#blog-cards article h2 a:hover {
+    opacity: .8;
+}
+
+#blog-cards article figure {
+    max-height: 500px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+#blog-cards article figure img {
+    width: 100%;
+}
+
+#blog-cards article p {
+    font-size: 1.1em;
+}
+
+#blog-cards article button {
+    background: #f67280;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-size: 1.2em;
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+#blog-cards article button:hover {
+    opacity: .8;
+}
+
+
+
+
+/* PAGINATION */
+#blog-pagination {
+    display: flex;
+    margin: 30px auto 40px;
+    max-width: 900px;
+    justify-content: space-between;
+}
+
+#blog-pagination .previous a, .numbering a, .next a {
+    padding: 10px 15px;
+    border-radius: 20px;
+    background: #e5e5e5;
+    font-size: 1em;
+    transition: all 0.3s ease-in-out 0s;
+    color: #363d4a;
+    text-decoration: none;
+    line-height: 0;
+    cursor: pointer;
+}
+
+#blog-pagination .previous a:hover, .numbering a:hover, .next a:hover  {
+    opacity: .8;
+}
+
+#blog-pagination .numbering a {
+    margin: 0 5px;
+}
+
+#blog-pagination .current-page {
+    background: #f67280;
+    color: #fff;
+}
+
+/* ARTICLE */
+#article .author {
+    background: #e5e5e5;
+    padding: 20px 10px;
+    color: #363d4a;
+    padding: 120px 0 20px;
+}
+
+#article .author .container {
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+#article .author .container img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+#article .author .container .divider {
+    display: flex;
+    margin: 20px auto;
+    max-width: 300px;
+}
+
+#article .author .container .divider hr {
+    width: 20%;
+    border: 1px solid #363d4a;
+    background: #363d4a;
+}
+
+#article .author .container .divider i {
+    color: #363d4a;
+}
+
+
+#article .article {
+    max-width: 900px;
+    padding: 30px 0;
+    margin: auto;
+}
+
+#article .article .heading h2 {
+    font-size: 2.4em;
+    font-weight: bold;
+    color: #363d4a;
+}
+
+#article .article .heading .publish p {
+    font-size: 1em;
+    color: #363d4a;
+    font-style: italic;
+    margin-top: none;
+}
+
+#article .article .heading figure {
+    max-height: 500px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+#article .article .heading figure img{
+    width: 100%;
+}
+
+#article .article .post p{
+    font-size: 1.1em;
+    text-align: justify;
+}
+
+#article .article .divider {
+    display: flex;
+    margin: 60px auto 20px;
+    max-width: 300px;
+}
+
+#article .article .divider hr {
+    width: 20%;
+    border: 1px solid #363d4a;
+    background: #363d4a;
+}
+
+#article .article .divider i {
+    color: #363d4a;
+}
+
+#article .article .categories {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#article .article .categories a {
+    font-size: .9em;
+    text-align: justify;
+    text-align: center;
+    text-decoration: none;
+    color: #363d4a;
+}
+
+#article .article .categories p {
+    font-size: .7em;
+    text-align: justify;
+    text-align: center;
+}
+
+#article .article .categories .tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#article .article .categories .tags button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: .7em;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out 0s;
+    margin: 0 10px 10px 10px;
+    background: #e5e5e5;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#article .article .categories .tags button:hover {
+    opacity: .8;
+}
+
+@media only screen and (max-width: 900px) {
+    #blog-cards article h2 a {
+        font-size: 1.5em!important;
+    }
+    #article .article .heading h2 {
+        font-size: 1.5em!important;
+    }
+    #article .article {
+        padding: 30px 30px!important;
+    }
+}
