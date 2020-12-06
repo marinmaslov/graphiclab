@@ -24,36 +24,6 @@
      font-size: 1em;
 }
 
-
-.blog-image {
-    background-image: url("../../../images/banner/blog.jpg")!important;
-}
-
-.store-image {
-    background-image: url("../../../images/banner/store.jpg")!important;
-}
-
-.contacts-image {
-    background-image: url("../../../images/banner/contacts.jpg")!important;
-    background-position: top!important;
-}
-
-.about-image {
-    background-image: url("../../../images/banner/about.jpg")!important;
-}
-
-.privacy-image {
-    background-image: url("../../../images/banner/privacy.jpg")!important;
-}
-
-
-
-
-
-
-
-
-
 @media only screen and (max-width: 900px) {
     #custom-banner .text {
         padding: 8em 4em 5em 4em!important;

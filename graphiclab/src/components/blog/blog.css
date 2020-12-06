@@ -34,15 +34,11 @@
 }
 
 #blog-filter .categories a {
-    margin-right: 20px;
+    margin: 0 20px;
     transition: all 0.3s ease-in-out 0s;
     cursor: pointer;
     color: #363d4a;
     text-decoration: none;
-}
-
-#blog-filter .categories a:last-child {
-    margin-right: 0;
 }
 
 #blog-filter .categories a:hover {
@@ -206,15 +202,13 @@
     opacity: .8;
 }
 
-
-
-
 /* PAGINATION */
 #blog-pagination {
     display: flex;
     margin: 30px auto 40px;
     max-width: 900px;
     justify-content: space-between;
+    padding: 0 30px;
 }
 
 #blog-pagination .previous a, .numbering a, .next a {

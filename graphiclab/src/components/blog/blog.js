@@ -20,6 +20,7 @@ export default class Blog extends React.Component {
         
         const { currentPage, numPages } = this.props.pageContext
         const isFirst = currentPage === 1
+        const isSecond = currentPage === 2
         const isLast = currentPage === numPages
         const prevPage = currentPage - 1 === 1 ? "/" : (currentPage - 1).toString()
         const nextPage = (currentPage + 1).toString()
@@ -28,7 +29,7 @@ export default class Blog extends React.Component {
             <>
             <Layout isContainer={false}>
                 {isFirst && (
-                    <Banner image={image} headline={headline} paragraph={parahraph}/>
+                    <Banner name="blog" />
                 )}
 
                 {!isFirst && (
@@ -48,8 +49,13 @@ export default class Blog extends React.Component {
 
                     <section id="blog-pagination">
                         <div className="previous">
-                            {!isFirst && (
+                            {!isFirst && !isSecond &&(
                                 <Link to={`/blog/${prevPage}`} rel="prev">
+                                    Prev
+                                </Link>
+                            )}
+                            {!isFirst && isSecond &&(
+                                <Link to={`/blog/`} rel="prev">
                                     Prev
                                 </Link>
                             )}

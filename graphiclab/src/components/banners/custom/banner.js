@@ -2,22 +2,59 @@
  * Banner blog component 
  */
 import React from "react"
+import { graphql, StaticQuery } from "gatsby"
+import Img from "gatsby-image"
+import Text from "../custom/components/text"
 
 import "./banner.css"
 
-
-import Text from "../custom/components/text"
-
-const Banner = ({ image, headline, paragraph }) => {
+const Banner = ({ name }) => {
     return (
-        <>
-            <div id="custom-banner" className={ image }>
-                <div className="overlay">
-                    <Text headline={headline} paragraph={paragraph}/>
-                </div>
-            </div>
-        </>
+        <StaticQuery on
+            query = { query }
+            render = { data => {
+                return (
+                    <>
+                        {data.images.edges.map(({ node: image }) => {
+                            return <>
+                                        { name === image.name &&
+                                            <>
+                                                <div id="custom-banner" className={ name } style={{ backgroundImage: `url(${image.image.fluid.src})` }}>
+                                                    <div className="overlay">
+                                                        <Text headline={image.headline.headline} paragraph={image.paragraph.paragraph}/>
+                                                    </div>
+                                                </div>
+                                            </>
+                                        }
+                                    </>
+                        })}
+                    </>
+                )}  
+            } 
+        /> 
     )
 }
 
 export default Banner
+
+export const query = graphql`{
+    images: allContentfulBannerImages {
+        edges {
+            node {
+                name
+                headline {
+                    headline
+                }
+                paragraph {
+                    paragraph
+                }
+                image {
+                    fluid(quality: 90) {
+                        src
+                    }
+                }
+            }
+        }
+    }
+}
+`

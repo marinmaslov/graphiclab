@@ -6,10 +6,6 @@ import Container from "../components/layout/base/components/container/container"
 import PropTypes from 'prop-types'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 
-const image = "contacts-image"
-const headline = "Contact us!"
-const paragraph = "Lets get in touch."
-
 export default class ContactsPage extends React.Component {
   static propTypes = {
     /** Latitude and Longitude of the map centre in an array, eg [51, -1] **/
@@ -29,7 +25,7 @@ export default class ContactsPage extends React.Component {
   render(){
     return(
       <Layout isContainer={false}>
-        <Banner image={image} headline={headline} paragraph={paragraph}/>
+        <Banner name="contacts"/>
         <Container>
                 <h2>Contacts</h2>
                 <p>Feel free to contact us! Here are some ways to do it:</p>
