@@ -10,14 +10,18 @@
     "gatsby-plugin-manifest": "^2.5.1",
     "gatsby-plugin-offline": "^3.3.1",
     "gatsby-plugin-react-helmet": "^3.3.14",
+    "gatsby-plugin-react-leaflet": "^2.0.13",
     "gatsby-plugin-sharp": "^2.7.0",
     "gatsby-source-contentful": "^4.2.0",
     "gatsby-source-filesystem": "^2.4.0",
     "gatsby-transformer-sharp": "^2.5.21",
+    "leaflet": "^1.7.1",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-helmet": "^6.1.0"
+    "react-helmet": "^6.1.0",
+    "react-leaflet": "^3.0.2",
+    "react-particles-js": "^3.4.1"
   },
   "devDependencies": {
     "prettier": "2.1.2"

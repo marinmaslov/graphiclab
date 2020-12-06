@@ -1,9 +1,10 @@
-/* Header --- START */
+/* Header ---START */
 #header {
     background: #363d4a;
     width: 100%;
     position: fixed;
     z-index: 999;
+	top: 0;
 }
 
 #header .container {
@@ -48,19 +49,15 @@
 }
 
 #header .nav ul:first-child li {
-    padding: 10px 5px;
+    padding: 10px 0 10px 30px;
 }
 
 #header .nav ul:last-child li:first-child {
-    padding: 10px 0 10px 5px;
+    padding: 10px 0 10px 30px;
 }
 
 #header .nav ul:last-child li:last-child {
     padding: 10px 0 10px 10px;
-}
-
-#header .nav ul:first-child li a {
-    padding: 10px 10px;
 }
 
 #header .nav li a {
@@ -76,6 +73,7 @@
 #header .nav li a i {
     margin: 0 10px 0 0;
 }
+
 
 #header .nav .shop {
     background: #f67280;
@@ -110,9 +108,24 @@
     }
 }
 
+@media only screen and (max-width: 1100px) {
+    #header .nav {
+        padding: 3px 0!important;
+    }
+    #header .container {
+        padding: 15px 0!important;
+        font-size: .9em!important;
+    }
+}
+
 @media only screen and (max-width: 900px) {
     #header .logo {
         margin-left: 20px;
     }
 }
-/* Header --- END */
+
+#header [aria-current] {
+    text-decoration: underline!important;
+}
+
+/* Header ---END */
