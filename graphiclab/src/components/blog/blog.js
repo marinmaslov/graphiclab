@@ -6,7 +6,6 @@ import { Link, graphql } from "gatsby"
 
 import "./blog.css"
 import Layout from "../layout/base/base"
-import InnerBlogContainer from "./components/container/container"
 import BlogCategories from "./components/categories/categories"
 import BlogCard from "./components/card/card"
   
@@ -22,7 +21,7 @@ export default class Blog extends React.Component {
 
         return (
             <>
-            <Layout>
+            <Layout isContainer={false}>
                 {isFirst && (
                     <p>BANNER</p>
                 )}
@@ -35,8 +34,6 @@ export default class Blog extends React.Component {
                 )}
 
                 <BlogCategories tag="All" position="up"/>
-
-                <InnerBlogContainer>
 
                     <section id="blog-cards">
                         {posts.map(({ node: article }) => {
@@ -67,7 +64,6 @@ export default class Blog extends React.Component {
                             )}
                         </div>
                     </section>
-                </InnerBlogContainer>
             </Layout>
             </>
         )

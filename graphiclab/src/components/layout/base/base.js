@@ -11,7 +11,7 @@ import Container from "./components/container/container"
 import Header from "./components/header/header"
 import Footer from "./components/footer/footer"
 
-const Base = ({ children }) => {
+const Base = ({ children, isContainer }) => {
   return (
     <>
         <Helmet>
@@ -19,11 +19,18 @@ const Base = ({ children }) => {
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"></link>
         </Helmet>
         <Header/>
-          <Container>
-            <main>
+          {isContainer && (
+              <Container>
+              <main>
+                {children}
+              </main>
+            </Container>
+          )}
+          {!isContainer && (
+              <main>
               {children}
             </main>
-          </Container>
+          )}
         <Footer/>
     </>
   )

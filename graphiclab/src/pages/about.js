@@ -3,7 +3,7 @@ import React from "react"
 import Layout from "../components/layout/base/base"
 
 const AboutPage = () => (
-    <Layout>
+    <Layout isContainer={true}>
         <h2>About us</h2>
         <p>Powerful, user-friendly and globally accessible, Fotor is an online photo editing suite, utilizing exclusive technology to bring an unprecedented level of editing control to anyone and everyone. While the ‘collage’ and ‘edit’ features are already enjoyed by millions of users, daily, the new ‘design’ feature gives the common user the ability to design any form of graphics and cover, limited only by imagination.</p>
         <p>Streamlined with a number of social media channels, Fotor’s exponentially growing user base is comprised of hundreds of millions of users across the globe. Initially graining great popularity with its optimized and user-friendly desktop suit for both Windows and Mac, Fotor now supports every major mobile and desktop platform from Android to iOS, with a specialized ‘Fotor for Messenger’ version, streamlined with Facebook for greater connectivity and convenience. Fotor’s mobile versions receive frequent updates and new features, not only providing the common user the ability to take and edit amazing photos, but also the convenience of having images shared and uploaded on all major social media platforms.</p>
