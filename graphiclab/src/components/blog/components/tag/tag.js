@@ -15,6 +15,7 @@ export default class BlogTag extends React.Component {
             
         const { currentPage, numTagPosts, id } = this.props.pageContext
         const isFirst = currentPage === 1
+        const isSecond = currentPage === 2
         const isLast = currentPage === numTagPosts
         const prevPage = currentPage - 1 === 1 ? "/" : (currentPage - 1).toString()
         const nextPage = (currentPage + 1).toString()
@@ -36,7 +37,12 @@ export default class BlogTag extends React.Component {
 
                 <section id="blog-pagination">
                     <div className="previous">
-                        {!isFirst && (
+                        {!isFirst && isSecond && (
+                            <Link to={`/blog/tag/` + id.replace(" ", "-").toLowerCase() + `${prevPage}`} rel="prev">
+                                Prev
+                            </Link>
+                        )}
+                        {!isFirst && !isSecond && (
                             <Link to={`/blog/tag/` + id.replace(" ", "-").toLowerCase() + `/${prevPage}`} rel="prev">
                                 Prev
                             </Link>

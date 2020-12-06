@@ -34,16 +34,16 @@ export default class SmallMenu extends React.Component {
                         <p className="mobile-menu-icon" onClick={this.handleMenuButtonClick}><i class="fas fa-times"></i></p>
                         <br/>
                         <Link className="menu-item" to="/" onClick={() => this.closeMenu() }>
-                            <p>Home</p>
+                            <p><i class="fas fa-home"></i>Home</p>
                         </Link>
                         <Link className="menu-item" to="/blog" onClick={() => this.closeMenu() }>
-                            <p>Blog</p>
+                            <p><i class="fas fa-book"></i>Blog</p>
                         </Link>
                         <Link className="menu-item" to="/contacts" onClick={() => this.closeMenu() }>
-                            <p>Contacts</p>
+                            <p><i class="fas fa-address-book"></i>Contacts</p>
                         </Link>
                         <Link className="menu-item" to="/about" onClick={() => this.closeMenu() }>
-                            <p>About</p>
+                            <p><i class="fas fa-info-circle"></i>About</p>
                         </Link>
 
                         <br/>

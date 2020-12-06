@@ -4,12 +4,13 @@
     padding: 20px 30px 20px 30px;
 }
 
-#page-not-found .container {
+#page-not-found .not-found-container {
     display: flex;
     justify-content: space-between;
+    margin-top: 80px!important;
 }
 
-#page-not-found .container .image-1 {
+#page-not-found .not-found-container .image-1 {
     background: url(../../../images/stickers/sticker_006.png);
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
@@ -19,28 +20,28 @@
     background-repeat: no-repeat;
 }
 
-#page-not-found .container .content {
+#page-not-found .not-found-container .content {
     text-align: center;
     display: flex;
     flex-direction: column;
 }
 
-#page-not-found .container .content h2 {
+#page-not-found .not-found-container .content h2 {
     font-size: 5em;
     margin: 0;
 }
 
-#page-not-found .container .content h3 {
+#page-not-found .not-found-container .content h3 {
     font-size: 2em;
     margin-top: 10px;
 }
 
-#page-not-found .container .content p {
+#page-not-found .not-found-container .content p {
     font-size: 1em;
     padding: 0 40px;
 }
 
-#page-not-found .container .content a {
+#page-not-found .not-found-container .content a {
     background: #f67280;
     padding: 10px 20px;
     border-radius: 20px;
@@ -50,16 +51,16 @@
     margin: 20px auto;
 }
 
-#page-not-found .container .content a:hover {
+#page-not-found .not-found-container .content a:hover {
     background: #d5636f;
 }
 
-#page-not-found .container .content i {
+#page-not-found .not-found-container .content i {
     margin-right: 10px;
 }
 
 
-#page-not-found .container .image-2 {
+#page-not-found .not-found-container .image-2 {
     background: url(../../../images/stickers/sticker_005.png);
     
     height: 300px;
@@ -120,8 +121,16 @@
     #page-not-found {
         margin: auto 10px!important;
     }
-    #page-not-found .container .image-1, #page-not-found .container .image-2 {
+    #page-not-found .not-found-container .image-1, #page-not-found .not-found-container .image-2 {
         display: none;
+    }
+    #page-not-found .not-found-container {
+        margin-top: 0px!important;
+        justify-content: center;
+    }
+    #page-not-found .not-found-container .content p {
+        font-size: 1em;
+        padding: 0 10px;
     }
 }
 /* Page 404 ---END */

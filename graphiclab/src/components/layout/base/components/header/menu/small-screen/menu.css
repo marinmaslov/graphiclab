@@ -34,7 +34,8 @@
 }
 
 #mobile-menu .content .menu-item p {
-    margin: 10px 2vh;
+    max-width: 20%;
+    margin: 20px auto;
 }
 
 #mobile-menu .content .menu-item p i {
@@ -73,6 +74,11 @@
     margin: auto 20px;
     cursor: pointer;
     transition: all 0.3s ease-in-out 0s;
+    padding: 10px;
+}
+
+.mobile-menu-icon i {
+    margin: 0!important;
 }
 
 .mobile-menu-icon:hover {

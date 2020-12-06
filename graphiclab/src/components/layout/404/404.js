@@ -4,7 +4,7 @@ import "./404.css"
 
 const PageNotFound = ({ }) => (
     <section id="page-not-found">
-        <div class="container">
+        <div class="not-found-container">
             <div class="image-1"></div>
             <div class="content">
                 <h2>404</h2>
