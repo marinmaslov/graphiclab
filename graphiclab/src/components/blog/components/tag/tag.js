@@ -38,7 +38,7 @@ export default class BlogTag extends React.Component {
                     <div className="previous">
                         {!isFirst && (
                             <Link to={`/blog/tag/` + id.replace(" ", "-").toLowerCase() + `/${prevPage}`} rel="prev">
-                            <i class="fas fa-arrow-left"></i>
+                                Prev
                             </Link>
                         )}
                     </div>
@@ -52,7 +52,7 @@ export default class BlogTag extends React.Component {
                     <div className="next">
                         {!isLast && (
                             <Link to={`/blog/tag/` + id.replace(" ", "-").toLowerCase() + `/${nextPage}`} rel="next">
-                            <i class="fas fa-arrow-right"></i>
+                                Next
                             </Link>
                         )}
                     </div>
