@@ -35,8 +35,11 @@ module.exports = {
       accessToken: 'XKqR8U_cR9zSKcgg856h8OMy1zRUqNFG_QrrI3EdqZ0',
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: 'gatsby-plugin-react-leaflet',
+      options: {
+        linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
+      }
+    }
   ],
 }
