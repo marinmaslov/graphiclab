@@ -27,6 +27,14 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+      spaceId: 'ho4x05eilz16',
+      // Learn about environment variables: https://gatsby.dev/env-vars
+      accessToken: 'XKqR8U_cR9zSKcgg856h8OMy1zRUqNFG_QrrI3EdqZ0',
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
