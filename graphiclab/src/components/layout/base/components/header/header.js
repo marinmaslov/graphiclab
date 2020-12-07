@@ -13,18 +13,7 @@ import useWindowSize from "./menu/resizer/resizer"
 
 const Header = ({ }) => {
     const { width } = useWindowSize()
-    if( width <= 960 ) {
-        return (
-            <>
-                <header id="header">
-                    <div className="container">
-                        <Logo/>
-                        <SmallMenu/> 
-                    </div>
-                </header>
-            </>
-        )
-    } else {
+    if( width >= 960 ) {
         return (
             <>
                 <header id="header">
@@ -35,7 +24,17 @@ const Header = ({ }) => {
                 </header>
             </>
         )
-    }
+    } 
+    return (
+        <>
+            <header id="header">
+                <div className="container">
+                    <Logo/>
+                    <SmallMenu/> 
+                </div>
+            </header>
+        </>
+    )
 }
 
 export default Header
