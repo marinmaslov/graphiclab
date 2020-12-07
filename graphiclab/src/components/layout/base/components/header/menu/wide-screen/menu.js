@@ -7,7 +7,7 @@ import { Link } from "gatsby"
 
 const Menu = ({ }) => {
     return (
-        <>
+        <div className="desktop-menu">
             <div id="desktop-menu" className="nav">
                 <ul class="list">
                     <li>
@@ -44,7 +44,7 @@ const Menu = ({ }) => {
                     </li>
                 </ul>
             </div>
-        </>
+        </div>
     )
     
 }
