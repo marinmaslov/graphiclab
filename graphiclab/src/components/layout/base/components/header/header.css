@@ -118,6 +118,22 @@
     }
 }
 
+#header .desktop-menu {
+    display: block;
+}
+#header .mobile-menu-icon {
+    display: none;
+}
+
+@media only screen and (max-width: 960px) {
+    #header .desktop-menu {
+        display: none;
+    }
+    #header .mobile-menu-icon {
+        display: block;
+    }
+}
+
 @media only screen and (max-width: 900px) {
     #header .logo {
         margin-left: 20px;
