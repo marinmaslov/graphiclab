@@ -3,7 +3,6 @@
  */
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import Img from "gatsby-image"
 import Text from "../custom/components/text"
 
 import "./banner.css"
@@ -20,7 +19,7 @@ const Banner = ({ name }) => {
                                         { name === image.name &&
                                             <>
                                                 <div id="custom-banner" className={ name } style={{ backgroundImage: `url(${image.image.fluid.src})` }}>
-                                                    <div className="overlay">
+                                                    <div className={`overlay  ${ name === "quote" && "center" }`}>
                                                         <Text headline={image.headline.headline} paragraph={image.paragraph.paragraph}/>
                                                     </div>
                                                 </div>

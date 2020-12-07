@@ -3,8 +3,6 @@
  */
 import React from "react"
 
-import "./text.css"
-
 const Text = ({ headline, paragraph }) => {
     return (
         <>
