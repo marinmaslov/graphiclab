@@ -1,0 +1,81 @@
+#contest {
+    margin: 20px auto 40px;
+    max-width: 1200px;
+}
+
+#contest .heading {
+    padding: 30px 20px 30px 20px;
+    text-align: center;
+}
+
+#contest .heading h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+#contest .heading p {
+    font-size: 1em;
+}
+
+#contest .container {
+    padding: 0 20px;
+    text-align: center;
+}
+
+#contest .container .cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+#contest .container .cards .card {
+    background: #f5f5f6;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+}
+
+#contest .container .cards .card img {
+    height: 300px;
+    width: 300px;
+}
+
+#contest .container .cards .card hr {
+    width: 30%;
+    opacity: .2;
+    margin: 20px auto;
+    border: 0.5px solid #363d4a;
+    background: #363d4a;
+}
+
+#contest .container .cards .card a {
+    font-size: 1.4em;
+    color: #363d4a;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+#contest .container .cards .card a:hover {
+    text-decoration: underline;
+}
+
+
+@media only screen and (max-width: 1100px) {
+    #contest .container .cards .card img {
+        height: 200px!important;
+        width: 200px!important;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #contest .container .cards {
+        flex-direction: column;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    #contest .container .cards .card img {
+        height: 150px!important;
+        width: 150px!important;
+    }
+}
