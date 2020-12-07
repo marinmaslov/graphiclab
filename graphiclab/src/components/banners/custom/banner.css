@@ -9,6 +9,10 @@
     background: rgba(0,0,0,0.2);
 }
 
+#custom-banner .center {
+    text-align: center;
+}
+
 #custom-banner .text {
     color: #fff;
     margin: auto;
