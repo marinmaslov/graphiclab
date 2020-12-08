@@ -4,13 +4,13 @@
 import React from "react"  
 import { Link } from "gatsby"
 
-const StoreCard = ({ product, categories }) => {
+const StoreCard = ({ product }) => {
     return (
         <>
-          <article id="product" className={ categories }>
+          <article id="product">
             <div className="container">
               <Link key={ product.id } to={`/store/${ product.id }`} state={ product }> 
-                <img src={product.image.fluid.src} alt={ roduct.name } />
+                <img src={product.image.fluid.src} alt={ product.name } />
               </Link>
 
               <hr/>
