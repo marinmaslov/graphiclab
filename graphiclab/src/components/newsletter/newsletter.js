@@ -11,7 +11,9 @@ const Newsletter = ({ }) => {
             <div className="container">
                 <h2>Subscribe to our newsletter <i class="fas fa-newspaper"></i></h2>
                 <form>
-                    <input type="email" placeholder="example@graphiclab.com"/>
+                    <label>
+                        <input type="email" placeholder="example@graphiclab.com"/>
+                    </label>
                     <button type="submit">Submit</button>
                 </form>
             </div>
