@@ -14,11 +14,14 @@ import Footer from "./components/footer/footer"
 const Base = ({ children, isContainer }) => {
   return (
     <>
-        <Helmet>
+        <Helmet
+          htmlAttributes = {{
+            lang: "en"
+          }}
+        >
             <meta charset="utf-8"></meta>
             <title>GraphicLab</title>
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"></link>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"></meta>
         </Helmet>
         <Header/>
           {isContainer && (

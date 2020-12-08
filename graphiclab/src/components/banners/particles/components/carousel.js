@@ -10,7 +10,7 @@ const Carousel = ({ }) => {
     return (
         <>
         <div class="carousel">
-            <img src={Image} />
+            <img src={Image} alt={ "sticker" }/>
         </div>
         </>
     )

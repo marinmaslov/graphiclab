@@ -21,7 +21,7 @@ export default ({ data }) => {
                                 <button class="chart"><i class="fas fa-cart-plus"></i>Add to chart</button>
                             </div>
                         </div>
-                        <img src={data.contentfulStoreProduct.image.fluid.src} />
+                        <img src={data.contentfulStoreProduct.image.fluid.src} alt={ data.contentfulStoreProduct.name } />
                     </div>
                     <div className="divider">
                         <hr/>

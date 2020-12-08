@@ -59,7 +59,7 @@ export default ({ data }) => {
             <div id="article">
                 <div className="author">
                     <div className="container">
-                        <img src={ data.contentfulBlogPost.author.image.fluid.src }  />
+                        <img src={ data.contentfulBlogPost.author.image.fluid.src } alt={ data.contentfulBlogPost.author.name } />
                         <p>Published by { data.contentfulBlogPost.author.name } { data.contentfulBlogPost.author.surname }</p>
                         <div className="divider">
                             <hr/>
@@ -73,7 +73,7 @@ export default ({ data }) => {
                     <div className="heading">
                         <h2>{ data.contentfulBlogPost.title }</h2>
                         <figure>
-                            <img src={data.contentfulBlogPost.image.fluid.src} />
+                            <img src={data.contentfulBlogPost.image.fluid.src} alt={data.contentfulBlogPost.name} />
                         </figure>
                     </div>
                     <div className="post">
