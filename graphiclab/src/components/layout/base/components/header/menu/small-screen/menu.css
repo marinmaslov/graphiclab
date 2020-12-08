@@ -6,14 +6,6 @@
     display: none;
 }
 
-#header [aria-current]  {
-    text-decoration: none!important;
-}
-
-[aria-current] .menu-item-element p {
-    text-decoration: underline!important;
-}
-
 #mobile-menu {
     position: fixed;
     background: #363d4a;
@@ -33,11 +25,12 @@
 #mobile-menu .content .menu-item {
     color: #fff;
     font-size: 1.2em;
+    line-height: 1.2em;
     text-decoration: none;
     transition: all 0.3s ease-in-out 0s;
 }
 
-#mobile-menu .content .menu-item:hover {
+#mobile-menu .content .menu-item .menu-item-element span:hover {
     text-decoration: underline;
 }
 
@@ -45,17 +38,11 @@
     max-width: 30vw;
     margin: 20px auto;
     display: flex;
-    justify-content: space-between;
-}
-
-#mobile-menu .content .menu-item .menu-item-element i {
-    width: 20%;
-    line-height: 1.5em;
+    justify-content: center;
 }
 
 #mobile-menu .content .menu-item .menu-item-element p {
     margin: 0;
-    width: 80%;
 }
 
 #mobile-menu .content .menu-item .menu-item-plain {

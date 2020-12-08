@@ -12,34 +12,34 @@ const Menu = ({ }) => {
                 <ul class="list">
                     <li>
                         <Link className="menu-item" to="/">
-                            <i class="fas fa-home"></i>Home
+                            <i class="fas fa-home"></i><span>Home</span>
                         </Link>
                     </li>
                     <li>
                         <Link className="menu-item" to="/blog/">
-                            <i class="fas fa-book"></i>Blog
+                            <i class="fas fa-book"></i><span>Blog</span>
                         </Link>
                     </li>
                     <li>
                         <Link className="menu-item" to="/contacts/">
-                            <i class="fas fa-address-book"></i>Contacts
+                            <i class="fas fa-address-book"></i><span>Contacts</span>
                         </Link>
                     </li>
                     <li>
                         <Link className="menu-item" to="/about/">
-                            <i class="fas fa-info-circle"></i>About
+                            <i class="fas fa-info-circle"></i><span>About</span>
                         </Link>
                     </li>
                 </ul>
                 <ul>
                     <li>
                         <Link className="menu-item" to="/store/">
-                            <a href="/store/" class="shop"><i class="fas fa-shopping-cart"></i>Store</a>
+                            <a href="/store/" class="shop"><i class="fas fa-shopping-cart"></i><span>Store</span></a>
                         </Link>
                     </li>
                     <li>
                         <Link className="menu-item" to="/login/">
-                            <a href="/" class="login"><i class="fas fa-user"></i>Log in</a>
+                            <a href="/" class="login"><i class="fas fa-user"></i><span>Log in</span></a>
                         </Link>
                     </li>
                 </ul>

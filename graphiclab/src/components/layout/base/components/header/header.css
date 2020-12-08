@@ -140,8 +140,7 @@
     }
 }
 
-#header [aria-current] {
+#header [aria-current] span, #header .menu-item:hover span {
     text-decoration: underline!important;
 }
-
 /* Header ---END */
