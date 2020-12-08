@@ -51,6 +51,7 @@
 
 #product a h2:hover {
     text-decoration: underline;
+    cursor: pointer;
 }
 
 #product button {

@@ -41,7 +41,7 @@ exports.createPages = async ({ graphql, actions }) => {
             edges {
                 node {
                     name
-                    product {
+                    store_product {
                         id
                     }
                 }
@@ -103,10 +103,10 @@ exports.createPages = async ({ graphql, actions }) => {
     /* STORE */
     /* STORE TAG PAGES */
     const allTagProducts = queries.data.allContentfulProductCategories.edges
-    const tagProductsPerPage = 1
+    const tagProductsPerPage = 6
     
     allTagProducts.forEach(({ node }) => {
-        const tagProducts = node.product
+        const tagProducts = node.store_product
         let numTagProducts = Math.ceil(tagProducts.length / tagProductsPerPage)
         Array.from({ length: numTagProducts }).forEach((_, i) => {
             createPage({
