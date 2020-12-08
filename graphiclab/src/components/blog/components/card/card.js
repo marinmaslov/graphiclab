@@ -23,7 +23,7 @@ const BlogCard = ({ article }) => {
             </h2>
             <figure>
               <Link key={ article.id } to={`/post/${ article.id }`} state={ article }>
-                <img src={article.image.fluid.src} />
+                <img src={article.image.fluid.src} alt={ "img" } />
               </Link>
             </figure>
             <p>{articleText}...</p>

@@ -9,7 +9,7 @@ const MainLogo = ({ }) => {
     return (
         <>
             <a href="/" class="logo">
-                <img src={ Logo }/>
+                <img src={ Logo } alt={ "logo" } />
                 <span><strong>Graphic</strong>Lab</span>
             </a>
         </>
