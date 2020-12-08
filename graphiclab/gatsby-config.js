@@ -34,6 +34,32 @@ module.exports = {
       options: {
         linkStyles: true // (default: true) Enable/disable loading stylesheets via CDN
       }
-    }
+    },
+    {
+      resolve: "gatsby-plugin-flexsearch",
+      options: {
+        type: "ContentfulStoreProduct",
+        fields: [
+          {
+            name: "id",
+            indexed: true,
+            resolver: "id",
+            store: true, // In case you want to make the field available in the search results.
+          },
+          {
+            name: "name",
+            indexed: true,
+            resolver: "name",
+            attributes: {
+              encode: "balance",
+              tokenize: "forward",
+              threshold: 6,
+              depth: 3,
+            },
+            store: true, // In case you want to make the field available in the search results.
+          }
+        ],
+      },
+    },
   ],
 }

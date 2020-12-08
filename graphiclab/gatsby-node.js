@@ -101,22 +101,6 @@ exports.createPages = async ({ graphql, actions }) => {
     })
 
     /* STORE */
-    /* STORE PAGES */
-    const products = queries.data.allContentfulStoreProduct.edges
-    const productsPerPage = 6
-    const numProducts = Math.ceil(products.length / productsPerPage)
-    Array.from({ length: numProducts }).forEach((_, i) => {
-        createPage({
-            path: i === 0 ? `/store` : `/store/${i + 1}`,
-            component: path.resolve("./src/components/store/store.js"),
-            context: {
-                limit: productsPerPage,
-                skip: i * productsPerPage,
-                numProducts,
-                currentPage: i + 1,
-            },
-        })
-    })
     /* STORE TAG PAGES */
     const allTagProducts = queries.data.allContentfulProductCategories.edges
     const tagProductsPerPage = 1

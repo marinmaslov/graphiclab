@@ -15,7 +15,7 @@ const query = graphql `{
     }
 }`
 
-const BlogCategories = ({ tag, position }) =>  {
+const Categories = ({ tag, position }) =>  {
     return (
         <StaticQuery on
             query = { query }
@@ -57,4 +57,4 @@ const BlogCategories = ({ tag, position }) =>  {
     )
 }
 
-export default BlogCategories
+export default Categories

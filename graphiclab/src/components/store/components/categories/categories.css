@@ -1,0 +1,88 @@
+#store-filter .active {
+    text-decoration: underline;
+}
+
+.hide {
+    display: none;
+}
+
+#store-filter {
+    background: #e5e5e5;
+    padding: 20px 10px;
+    color: #363d4a;
+}
+
+#store-filter h3 {
+    font-size: 0.9em;
+    text-align: center;
+    margin: 0;
+    font-weight: normal;
+}
+
+#store-filter .categories {
+    display: flex;
+    justify-content: center;
+    font-size: 1em;
+    font-weight: bold;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+#store-filter .categories a {
+    margin: 0 20px;
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    color: #363d4a;
+    text-decoration: none;
+    background: #d2d2d2;
+    padding: 5px 30px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+#store-filter .categories a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+#store-filter .categories a:active, #store-filter .categories a:fisited {
+    color: #363d4a;
+}
+
+#store-filter .categories .underline {
+    text-decoration: underline;
+    background: #c5c5c5;
+}
+
+#store-filter .divider {
+    display: flex;
+    margin: 20px auto;
+    max-width: 300px;
+}
+
+#store-filter .divider hr {
+    width: 20%;
+    border: 1px solid #363d4a;
+    background: #363d4a;
+}
+
+#store-filter .divider i {
+    color: #363d4a;
+}
+
+@media only screen and (max-width: 900px) {
+    #store-filter .categories {
+        flex-wrap: wrap!important;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #store-filter .categories input {
+        width: 45%;
+    }
+
+    #store-filter .categories label {
+        width: 45%;
+        margin: 3px 3px 3px 4px!important;
+    }
+}

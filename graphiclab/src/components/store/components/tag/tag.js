@@ -7,11 +7,14 @@ import { Link, graphql } from "gatsby"
 import "../../../blog/blog.css"
 import Layout from "../../../layout/base/base"
 import StoreCard from "../card/card"
+import StoreCategories from "../categories/categories"
+
+import "./tag.css"
 
 export default class BlogTag extends React.Component {
     render(){
         const products = this.props.data.allContentfulStoreProduct.edges
-            
+        console.log(products)
         const { currentPage, numTagProducts, id } = this.props.pageContext
         const isFirst = currentPage === 1
         const isSecond = currentPage === 2
@@ -21,15 +24,22 @@ export default class BlogTag extends React.Component {
 
         return (
             <Layout>
+                <section id="store-tag-page">
+                    <h3>The tag you're browsing is: <span>#{id}</span></h3>
+                    <h4>Page: { currentPage } / { numTagProducts }</h4>
+                </section>
+
+                <StoreCategories tag={id} position="up"/>
+
                 <section id="store-cards">
                     <div className="products">
                         {products.map(({ node: product }) => {
-                            return <StoreCard product={product} />
+                            return <StoreCard id={ product.id } />
                         })}
                     </div>
                 </section>
 
-                <section id="blog-pagination">
+                <section id="store-pagination">
                     <div className="previous">
                         {!isFirst && isSecond && (
                             <Link to={`/store/tag/` + id.replace(" ", "-").toLowerCase() + `${prevPage}`} rel="prev">
