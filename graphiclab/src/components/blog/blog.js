@@ -12,10 +12,6 @@ import BlogCard from "./components/card/card"
   
 export default class Blog extends React.Component {
     render(){
-        const image = "blog-image"
-        const headline = "Stories behind our Brand"
-        const parahraph = "Humans have been storytellers for millennia – long before we could even write stories down. In fact, neuroscience has proved that stories tap into our brains in a unique way. So when a story captures our attention, we listen to it, and we remember it."
-
         const posts = this.props.data.allContentfulBlogPost.edges
         
         const { currentPage, numPages } = this.props.pageContext

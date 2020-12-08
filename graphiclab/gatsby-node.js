@@ -36,15 +36,25 @@ exports.createPages = async ({ graphql, actions }) => {
                     id
                 }
             }
+        },
+        allContentfulProductCategories {
+            edges {
+                node {
+                    name
+                    product {
+                        id
+                    }
+                }
+            }
         }
       }
     `)
 
+    /* BLOG */
+    /* BLOG PAGES */
     const posts = queries.data.allContentfulBlogPost.edges
     const postsPerPage = 1
     const numPages = Math.ceil(posts.length / postsPerPage)
-
-    /* BLOG PAGES */
     Array.from({ length: numPages }).forEach((_, i) => {
         createPage({
             path: i === 0 ? `/blog` : `/blog/${i + 1}`,
@@ -57,7 +67,6 @@ exports.createPages = async ({ graphql, actions }) => {
             },
         })
     })
-
     /* BLOG TAG PAGES */
     const allTagPosts = queries.data.allContentfulBlogPostCategory.edges
     const tagPostsPerPage = 1
@@ -79,8 +88,6 @@ exports.createPages = async ({ graphql, actions }) => {
             })
         })
     })
-        
-
     /* BLOG ARTICLES */
     queries.data.allContentfulBlogPost.edges.forEach(({ node }) => {
 
@@ -93,6 +100,29 @@ exports.createPages = async ({ graphql, actions }) => {
         })
     })
 
+    /* STORE */
+    /* STORE TAG PAGES */
+    const allTagProducts = queries.data.allContentfulProductCategories.edges
+    const tagProductsPerPage = 1
+    
+    allTagProducts.forEach(({ node }) => {
+        const tagProducts = node.product
+        let numTagProducts = Math.ceil(tagProducts.length / tagProductsPerPage)
+        Array.from({ length: numTagProducts }).forEach((_, i) => {
+            createPage({
+                path: i === 0 ? `/store/tag/` + node.name.replace(" ", "-").toLowerCase()  : `/store/tag/` + node.name.replace(" ", "-").toLowerCase() + `/${i + 1}`,
+                component: path.resolve("./src/components/store/components/tag/tag.js"),
+                context: {
+                    id: node.name,
+                    limit: tagProductsPerPage,
+                    skip: i * tagProductsPerPage,
+                    numTagProducts,
+                    currentPage: i + 1,
+                },
+            })
+        })
+    })
+    /* STORE PRODUCTS */
     queries.data.allContentfulStoreProduct.edges.forEach(({ node }) => {
         createPage({
             path: '/store/' + node.id + '/',

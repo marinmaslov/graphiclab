@@ -1,0 +1,56 @@
+/* Tag ---START */
+#store-tag-page {
+    padding: 90px 20px 10px;
+    text-align: center;
+    background: #e5e5e5;
+}
+
+#store-tag-page h3 {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+#store-tag-page h3 span {
+    color: #d4515f;
+}
+
+#store-tag-page h4 {
+    font-size: 1em;
+    margin: 0 0 -10px 0;
+}
+/* Tag ---END */
+
+/* Pagination ---START */
+#store-pagination {
+    display: flex;
+    margin: 30px auto 40px;
+    max-width: 900px;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+#store-pagination .previous a, .numbering a, .next a {
+    padding: 10px 15px;
+    border-radius: 20px;
+    background: #e5e5e5;
+    font-size: 1em;
+    transition: all 0.3s ease-in-out 0s;
+    color: #363d4a;
+    text-decoration: none;
+    line-height: 0;
+    cursor: pointer;
+}
+
+#store-pagination .previous a:hover, .numbering a:hover, .next a:hover  {
+    opacity: .8;
+}
+
+#store-pagination .numbering a {
+    margin: 0 5px;
+}
+
+#store-pagination .current-page {
+    background: #f67280;
+    color: #fff;
+}
+/* Pagination ---END */

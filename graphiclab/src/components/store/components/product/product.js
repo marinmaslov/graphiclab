@@ -2,9 +2,11 @@
  * Blog Article
  */
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 
 import Layout from "../../../layout/base/base";
+
+import "./product.css"
 
 export default ({ data }) => {
     return (
@@ -32,7 +34,7 @@ export default ({ data }) => {
                         <p>Categories:</p>
                         <div className="buttons">
                         {data.contentfulStoreProduct.category.map(({ name: category }) => {
-                                        return  <button>#{ category }</button>
+                                        return  <button><Link to={"/store/tag/" + category.replace(" ", "-").toLowerCase()}>#{ category }</Link></button>
                         })}
                         </div>
                     </div>
