@@ -105,8 +105,14 @@
     opacity: 0.7;
 }
 
+@media only screen and (max-width: 520px) {
+    #mobile-menu .content .menu-item .menu-item-element {
+        max-width: 45vw;
+    }
+}
+
 @media only screen and (max-width: 370px) {
-    #mobile-menu .content .menu-item p {
+    #mobile-menu .content .menu-item .menu-item-element {
         max-width: 60vw;
     }
 }
