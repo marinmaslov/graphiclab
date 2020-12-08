@@ -7,7 +7,9 @@ import { Link } from "gatsby"
 const ContestCard = ({ product }) => {
     return (
         <div className="card">
-          <img src={product.product.image.fluid.src} />
+          <Link key={ product.id } to={`/store/${ product.product.id }`}>
+            <img src={product.product.image.fluid.src} />
+          </Link>
           <hr/>
           <Link key={ product.id } to={`/store/${ product.product.id }`}>
             {product.name}
