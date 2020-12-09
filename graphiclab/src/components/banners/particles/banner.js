@@ -9,7 +9,10 @@ import Carousel from "../particles/components/carousel"
 
 import "./banner.css"
 
-const Particles = lazy(() => import ("./components/particles/particles"))
+const Particles = lazy(
+  () => import ("./components/particles/particles"),
+  { chunkName: 'Particles' }
+)
 
 const Banner = ({ }) => {
     return (
