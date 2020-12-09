@@ -17,7 +17,7 @@ const query = graphql`{
                 product {
                     id
                     image {
-                        fluid(quality: 30, maxHeight: 300, maxWidth: 300) {
+                        fluid(quality: 25, maxHeight: 300, maxWidth: 300) {
                           src
                         }
                     }
@@ -33,7 +33,7 @@ const query = graphql`{
                 product {
                     id
                     image {
-                        fluid(quality: 30, maxHeight: 300, maxWidth: 300) {
+                        fluid(quality: 25, maxHeight: 300, maxWidth: 300) {
                           src
                         }
                     }
