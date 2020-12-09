@@ -28,6 +28,12 @@
      font-size: 1em;
 }
 
+@media only screen and (max-width: 1300px) {
+    #custom-banner .text {
+        padding: 10em 4em;
+    }
+}
+
 @media only screen and (max-width: 900px) {
     #custom-banner .text {
         padding: 8em 4em 5em 4em!important;

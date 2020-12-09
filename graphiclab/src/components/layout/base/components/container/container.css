@@ -28,8 +28,11 @@
     display: none;
 }
 
-
-
+@media only screen and (max-width: 1300px) {
+    .container .content {
+        padding: 60px 4em;
+    }
+}
 
 @media only screen and (max-width: 900px) {
     .container .content {

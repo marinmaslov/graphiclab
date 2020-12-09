@@ -40,9 +40,9 @@
     color:#fff;
 }
 
-#banner .container .carousel img {
-    max-height: 300px;
-    width: auto;
+#banner .container .carousel .img {
+    height: 300px;
+    width: 300px;
     margin: auto;
 }
 
@@ -125,13 +125,14 @@
     #banner .buttons button {
         font-size: 1em!important;
     }
-    #banner .carousel img {
+    #banner .carousel .img {
         /* max-height: 240px!important; */
     }
 }
 
 @media only screen and (max-width: 670px) {
-    #banner .container .carousel img {
-        max-height: 250px!important;
+    #banner .container .carousel .img {
+        height: 250px!important;
+        width: 250px!important;
     }
 }
