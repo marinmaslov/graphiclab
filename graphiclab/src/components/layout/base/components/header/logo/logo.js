@@ -27,7 +27,7 @@ export default MainLogo
 export const query = graphql`{
     contentfulStickerImages(name: {eq: "logo"}) {
         image {
-            fluid(quality: 30, maxHeight: 50, maxWidth: 50) {
+            fluid(quality: 30, maxHeight: 40, maxWidth: 40) {
                 src
             }
         }
