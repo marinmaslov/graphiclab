@@ -1,4 +1,6 @@
 import React from "react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome } from '@fortawesome/free-solid-svg-icons'
 
 import "./404.css"
 
@@ -10,7 +12,7 @@ const PageNotFound = ({ }) => (
                 <h2>404</h2>
                 <h3>page not found</h3>
                 <p>Either you typed something wrong or aliens obducted this page.</p>
-                <a href="/" class="button"><i class="fas fa-home"></i>Home page</a>
+                <a href="/" class="button"><i><FontAwesomeIcon icon={ faHome }/></i>Home page</a>
             </div>
             <div class="image-2"></div>
         </div>
