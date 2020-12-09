@@ -23,13 +23,11 @@ footer .section {
 }
 
 .image {
-    background: url("../../../../../images/stickers/sticker_004.png");
     position: absolute;
     height: 300px;
     background-size: contain;
     background-repeat: no-repeat;
     margin: -350px 0 0 40px;
-    padding: 0 0 0 300px;
 }
 
 @media only screen and (max-width: 1130px) {
