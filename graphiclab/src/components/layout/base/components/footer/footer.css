@@ -23,8 +23,9 @@ footer .section {
 }
 
 .image {
-    position: absolute;
+    position: absolute!important;
     height: 300px;
+    width: 300px;
     background-size: contain;
     background-repeat: no-repeat;
     margin: -350px 0 0 40px;
@@ -127,7 +128,7 @@ footer .section {
 .urls{
     display: flex;
     justify-content: space-around;
-    margin: auto 60vh;
+    margin: auto 35vh;
     color: #fff;
     text-align: center;
     padding: 40px 0;

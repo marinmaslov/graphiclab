@@ -3,6 +3,7 @@
  */
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
+import Img from "gatsby-image"
 
 import "./footer.css"
 
@@ -21,18 +22,21 @@ const Footer = ({ }) => {
                 <h2>GraphicLab's products are made with tons of chocolate.</h2>
                 <p>Copyright 2019 GraphicLab. 'GraphicLab' is a registered trademark of GraphicLab Inc. All rights reserved.</p>
             </div>
-            <div class="image">
-                <StaticQuery on
-                    query = { query }
-                    render = { data => {
-                        return (
-                            <>
-                                <img src={ data.contentfulStickerImages.image.fluid.src } alt={ "sticker" }/>
-                            </>
-                        )}  
-                    } 
-                /> 
-            </div>
+            <StaticQuery on
+                query = { query }
+                render = { data => {
+                    return (
+                        <>
+                            
+                            <Img
+                                fluid={ data.contentfulStickerImages.image.fluid }
+                                className={ "image" }
+                                alt={ "sticker" }
+                            />
+                        </>
+                    )}  
+                }
+            /> 
         </footer>
         </>
     )
