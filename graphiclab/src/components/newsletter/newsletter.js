@@ -15,9 +15,10 @@ const Newsletter = ({ }) => {
                 <h2>Subscribe to our newsletter <i><FontAwesomeIcon icon={ faNewspaper }/></i></h2>
                 <form>
                     <label>
+                        E-mail:
                         <input type="email" placeholder="example@graphiclab.com"/>
                     </label>
-                    <button type="submit">Submit</button>
+                    <button type="submit">Subscribe</button>
                 </form>
             </div>
         </section>
