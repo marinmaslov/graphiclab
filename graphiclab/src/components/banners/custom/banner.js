@@ -48,7 +48,7 @@ export const query = graphql`{
                     paragraph
                 }
                 image {
-                    fluid(quality: 90) {
+                    fluid(quality: 70) {
                         src
                     }
                 }
