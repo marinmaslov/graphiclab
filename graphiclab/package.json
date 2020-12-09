@@ -26,6 +26,7 @@
     "react-google-map": "^3.1.1",
     "react-google-maps-loader": "^4.3.0",
     "react-helmet": "^6.1.0",
+    "react-lazy-ssr": "^0.2.4",
     "react-particles-js": "^3.4.1"
   },
   "devDependencies": {
