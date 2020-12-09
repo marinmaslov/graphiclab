@@ -2,6 +2,9 @@
  * Menu component of Header
  */
 import React from "react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome, faBook, faAddressBook, faInfoCircle, faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons'
+
 
 import { Link } from "gatsby"
 
@@ -12,34 +15,38 @@ const Menu = ({ }) => {
                 <ul class="list">
                     <li>
                         <Link className="menu-item" to="/">
-                            <i class="fas fa-home"></i><span>Home</span>
+                            <FontAwesomeIcon icon={ faHome }/>
+                            <span>Home</span>
                         </Link>
                     </li>
                     <li>
                         <Link className="menu-item" to="/blog/">
-                            <i class="fas fa-book"></i><span>Blog</span>
+                            <FontAwesomeIcon icon={ faBook }/>
+                            <span>Blog</span>
                         </Link>
                     </li>
                     <li>
                         <Link className="menu-item" to="/contacts/">
-                            <i class="fas fa-address-book"></i><span>Contacts</span>
+                            <FontAwesomeIcon icon={ faAddressBook }/>
+                            <span>Contacts</span>
                         </Link>
                     </li>
                     <li>
                         <Link className="menu-item" to="/about/">
-                            <i class="fas fa-info-circle"></i><span>About</span>
+                            <FontAwesomeIcon icon={ faInfoCircle }/>
+                            <span>About</span>
                         </Link>
                     </li>
                 </ul>
                 <ul>
                     <li>
                         <Link className="menu-item" to="/store/">
-                            <a href="/store/" class="shop"><i class="fas fa-shopping-cart"></i><span>Store</span></a>
+                            <a href="/store/" class="shop"><FontAwesomeIcon icon={ faShoppingCart }/><span>Store</span></a>
                         </Link>
                     </li>
                     <li>
                         <Link className="menu-item" to="/login/">
-                            <a href="/" class="login"><i class="fas fa-user"></i><span>Log in</span></a>
+                            <a href="/" class="login"><FontAwesomeIcon icon={ faUser }/><span>Log in</span></a>
                         </Link>
                     </li>
                 </ul>

@@ -64,6 +64,7 @@
     width: 20%;
     border: 1px solid #363d4a;
     background: #363d4a;
+    height: 1px;
 }
 
 #store-filter .divider i {

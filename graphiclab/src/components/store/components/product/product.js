@@ -6,6 +6,9 @@ import { graphql, Link } from "gatsby"
 
 import Layout from "../../../layout/base/base";
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartPlus, faDragon, faMoneyBillWave } from '@fortawesome/free-solid-svg-icons'
+
 import "./product.css"
 
 export default ({ data }) => {
@@ -19,15 +22,15 @@ export default ({ data }) => {
                             <p>{ data.contentfulStoreProduct.description.description }</p>
                             <h3>${ data.contentfulStoreProduct.price }</h3>
                             <div class="buttons">
-                                <button class="buy"><i class="fas fa-money-bill-wave"></i>Buy now</button>
-                                <button class="chart"><i class="fas fa-cart-plus"></i>Add to chart</button>
+                                <button class="buy"><i><FontAwesomeIcon icon={ faMoneyBillWave }/></i>Buy now</button>
+                                <button class="chart"><i><FontAwesomeIcon icon={ faCartPlus }/></i>Add to chart</button>
                             </div>
                         </div>
                         <img src={data.contentfulStoreProduct.image.fluid.src} alt={ data.contentfulStoreProduct.name } />
                     </div>
                     <div className="divider">
                         <hr/>
-                        <i class="fas fa-dragon"></i>
+                        <i><FontAwesomeIcon icon={ faDragon }/></i>
                         <hr/>
                     </div>
                     <div class="categories">

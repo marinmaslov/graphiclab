@@ -69,6 +69,7 @@
     width: 20%;
     border: 1px solid #363d4a;
     background: #363d4a;
+    height: 1px;
 }
 
 #blog-filter .divider i {
@@ -271,6 +272,7 @@
     width: 20%;
     border: 1px solid #363d4a;
     background: #363d4a;
+    height: 1px;
 }
 
 #article .author .container .divider i {
@@ -322,6 +324,7 @@
     width: 20%;
     border: 1px solid #363d4a;
     background: #363d4a;
+    height: 1px;
 }
 
 #article .article .divider i {
