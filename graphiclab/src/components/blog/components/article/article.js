@@ -7,6 +7,9 @@ import { graphql } from "gatsby"
 import Layout from "../../../layout/base/base"
 import { Link } from "gatsby"
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faNewspaper, faIceCream } from '@fortawesome/free-solid-svg-icons'
+
 export default ({ data }) => {
 
     const preparedDate = data.contentfulBlogPost.date.split("T")[0].split("-")
@@ -63,7 +66,7 @@ export default ({ data }) => {
                         <p>Published by { data.contentfulBlogPost.author.name } { data.contentfulBlogPost.author.surname }</p>
                         <div className="divider">
                             <hr/>
-                            <i class="fas fa-newspaper"></i>
+                            <i><FontAwesomeIcon icon={ faNewspaper }/></i>
                             <hr/>
                         </div>
                         <p>on { preparedDate[1] } { preparedDate[2] }, { preparedDate[0]}</p>
@@ -82,7 +85,7 @@ export default ({ data }) => {
                     
                     <div className="divider">
                         <hr/>
-                        <i class="fas fa-ice-cream"></i>
+                        <i><FontAwesomeIcon icon={ faIceCream }/></i>
                         <hr/>
                     </div>
                     <div class="categories">

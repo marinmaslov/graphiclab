@@ -11,6 +11,9 @@ import Banner from "../components/banners/custom/banner"
 import Categories from "../components/store/components/categories/categories"
 import StoreCard from "../components/store/components/card/card"
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+
 import "../components/store/store.css"
 
 function getSearchResults(query) {
@@ -63,7 +66,7 @@ const Store = ({ data }) => {
 
             <section id="store-search" className={( query && filtered_products.length > 0 ? `green` : `` ) || ( query && filtered_products.length === 0 ? `red` : `` )}>
                 <div className="search-container">
-                    <i className="fas fa-search"></i>
+                    <i><FontAwesomeIcon icon={ faSearch }/></i>
                     <input  type="search" 
                             placeholder="Searching for something particular?" 
                             value={query || ""} 

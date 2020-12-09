@@ -70,8 +70,8 @@
     opacity: .8;
 }
 
-#header .nav li a i {
-    margin: 0 10px 0 0;
+#header .nav li a span {
+    margin: 0 0 0 10px;
 }
 
 

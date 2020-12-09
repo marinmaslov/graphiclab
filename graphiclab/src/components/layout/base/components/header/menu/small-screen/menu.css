@@ -58,8 +58,8 @@
     opacity: .7;
 }
 
-#mobile-menu .content .menu-item p i {
-    margin-right: 10px;
+#mobile-menu .content .menu-item p span {
+    margin-left: 10px;
 }
 
 #mobile-menu .content .shop {

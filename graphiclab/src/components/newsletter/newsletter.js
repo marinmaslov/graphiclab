@@ -3,13 +3,16 @@
  */
 import React from "react"
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faNewspaper } from '@fortawesome/free-solid-svg-icons'
+
 import "./newsletter.css"
 
 const Newsletter = ({ }) => {
     return (
         <section id="newsletter">
             <div className="container">
-                <h2>Subscribe to our newsletter <i class="fas fa-newspaper"></i></h2>
+                <h2>Subscribe to our newsletter <i><FontAwesomeIcon icon={ faNewspaper }/></i></h2>
                 <form>
                     <label>
                         <input type="email" placeholder="example@graphiclab.com"/>

@@ -84,8 +84,8 @@
     margin: 0 5px 0 0;
 }
 
-#banner .buttons button i {
-    margin: 0 10px 0 0;
+#banner .buttons button span {
+    margin: 0 0 0 10px;
 }
 
 #banner .buttons button:hover {

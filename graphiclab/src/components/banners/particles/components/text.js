@@ -2,6 +2,9 @@
  * Carousel component that is part of Banner 
  */
 import React from "react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faInfoCircle, faCreditCard } from '@fortawesome/free-solid-svg-icons'
+
 
 import "./text.css"
 
@@ -12,8 +15,8 @@ const Text = ({ }) => {
             <h2>Get the Toothles sticker today!</h2>
             <p>Also check our other products! Tons of chocolate is needed for designing them and the gym subscription for losing those pounds won't pay on its own.</p>
             <div class="buttons">
-                <button><i class="fas fa-info-circle"></i>See more</button>
-                <button><i class="fas fa-credit-card"></i>Buy</button>
+                <button><FontAwesomeIcon icon={ faInfoCircle }/><span>See more</span></button>
+                <button><FontAwesomeIcon icon={ faCreditCard }/><span>Buy</span></button>
             </div>
         </div>
         </>
