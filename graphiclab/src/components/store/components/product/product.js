@@ -50,7 +50,7 @@ query($id: String!) {
         id
         name
         image {
-            fluid {
+            fluid(quality: 30, maxHeight: 480, maxWidth: 480) {
                 src
             }
         }

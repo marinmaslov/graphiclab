@@ -56,7 +56,7 @@ export const query = graphql`{
               name
           }
           image {
-              fluid {
+              fluid(quality: 30, maxHeight: 300, maxWidth: 300) {
                   src
               }
           }
