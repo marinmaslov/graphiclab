@@ -49,7 +49,7 @@
     max-width: 30vw;
     margin: 20px auto;
     background: #4f5560;
-    padding: 10px 20px;
+    padding: 2px 20px;
     border-radius: 20px;
     transition: all .2s ease-in-out;
 }
@@ -64,7 +64,7 @@
 
 #mobile-menu .content .shop {
     background: #f67280;
-    padding: 10px 20px;
+    padding: 2px 20px;
     border-radius: 20px;
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -77,7 +77,7 @@
 
 #mobile-menu .content .login {
     background: #f8b195;
-    padding: 10px 20px;
+    padding: 2px 20px;
     border-radius: 20px;
     -webkit-transition: all .2s ease-in-out;
     transition: all .2s ease-in-out;
@@ -114,5 +114,13 @@
 @media only screen and (max-width: 370px) {
     #mobile-menu .content .menu-item .menu-item-element {
         max-width: 60vw;
+    }
+}
+
+
+
+@media only screen and (min-width: 961px) {
+    #mobile-menu {
+        display: none!important;
     }
 }

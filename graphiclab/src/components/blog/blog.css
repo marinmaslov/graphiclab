@@ -413,6 +413,9 @@
     #article .article {
         padding: 30px 30px!important;
     }
+    #blog-cards article figure {
+        margin-top: 3em;
+    }
 }
 
 
@@ -443,6 +446,18 @@
     #blog-tag-page-top {
         max-width: unset;
         margin: auto 30px;
+    }
+}
+
+@media only screen and (max-width: 1000px) { 
+    #blog-cards article {
+        margin: 30px;
+    }
+    #blog-cards article {
+        margin-top: 50px!important;
+    }
+    #blog-cards article:first-child {
+        margin-top: 30px!important;
     }
 }
 
