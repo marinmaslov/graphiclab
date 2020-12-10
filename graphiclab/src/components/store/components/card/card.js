@@ -3,6 +3,8 @@
  */
 import React from "react"  
 import { Link, StaticQuery } from "gatsby"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons'
 
 import "./card.css"
 
@@ -30,7 +32,7 @@ const StoreCard = ({ id }) => {
                           
                                         <div className="cart">
                                           <p>${product.price}</p>
-                                          <button><i class="fas fa-cart-plus"></i>Add to chart</button>
+                                          <button><i><FontAwesomeIcon icon={ faCartPlus }/></i>Add to chart</button>
                                         </div>              
                                       </div>
                                     </article>
@@ -56,7 +58,7 @@ export const query = graphql`{
               name
           }
           image {
-              fluid(quality: 30, maxHeight: 300, maxWidth: 300) {
+              fluid(quality: 90, maxHeight: 300, maxWidth: 300) {
                   src
               }
           }

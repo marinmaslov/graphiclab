@@ -13,6 +13,11 @@ i, p i {
     text-decoration: none!important;
 }
 
+p {
+    font-size: 1.1em;
+    font-size: 1.2em;
+}
+
 :focus{
     outline:none;
 }
@@ -20,5 +25,9 @@ i, p i {
 .leaflet-container {
     width: 100%;
     height: 300px;
+}
+
+a:-webkit-any-link {
+    text-decoration: none;
 }
 /* Base --- END */

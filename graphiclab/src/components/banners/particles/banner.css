@@ -16,7 +16,7 @@
     justify-content: space-between;
     margin: -80px auto auto;
     padding: 30vh 50px 20vh;
-    height: 50vh;
+    /* height: 50vh; */
     max-width: 1200px;
 }
 
@@ -28,7 +28,7 @@
 }
 
 #banner .container .text h2 {
-    font-size: 3em;
+    font-size: 2.6em;
     margin: 0 0 .3em 0;
 }
 
@@ -94,6 +94,15 @@
 }
 
 
+@media only screen and (max-width: 1200px) {
+    @media only screen and (max-width: 1200px) {
+        #banner .container .text h2 {
+            font-size: 2em;
+        }
+    }
+}
+
+
 /* Banner ---   END */
 @media only screen and (max-width: 1000px) {
     .desktop-particles {
@@ -109,7 +118,7 @@
     #banner .container {
         margin: -180px auto!important;
         /* padding: 180px 20px 30px!important; */
-        padding: 40vh 50px 20vh!important;
+        padding: 28vh 50px 5vh!important;
         height: unset!important;
         flex-direction: column-reverse!important;
     }
@@ -127,13 +136,46 @@
         font-size: 1em!important;
     }
     #banner .carousel .img {
-        /* max-height: 240px!important; */
+        height: 250px!important;
+        width: 250px!important;
     }
 }
 
 @media only screen and (max-width: 670px) {
+    #banner .container .text h2 {
+        font-size: 1.6em;
+    }
+    #banner .container .text p {
+        font-size: 1em;
+    }
     #banner .container .carousel .img {
-        height: 250px!important;
-        width: 250px!important;
+        height: 200px!important;
+        width: 200px!important;
+    }
+    #banner .buttons button {
+        font-size: 1em!important;
+    }
+}
+
+@media only screen and (max-width: 490px) {
+    #banner .container {
+        padding: 35vh 50px 0vh!important;
+    }
+    #banner .container .text{
+        padding: 10px 0;
+    }
+    #banner .container .text h2 {
+        font-size: 1.4em;
+        margin-top: 0;
+    }
+    #banner .container .text p {
+        font-size: .9em;
+    }
+    #banner .container .carousel .img {
+        height: 150px!important;
+        width: 150px!important;
+    }
+    #banner .buttons button {
+        font-size: .9em!important;
     }
 }

@@ -3,6 +3,7 @@
  */
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
+import BackgroundImage from 'gatsby-background-image'
 
 const MainLogo = ({ }) => {
     return (
@@ -12,7 +13,13 @@ const MainLogo = ({ }) => {
                 render = { data => {
                     return (
                         <>
-                            <span className={"logo-image"} style={{ backgroundImage: `url(${ data.contentfulStickerImages.image.fluid.src }` }}></span>
+                            <BackgroundImage
+                                Tag="span"
+                                className={ "logo-image" }
+                                alt={ "logo" }
+                                fluid={ data.contentfulStickerImages.image.fluid }
+                            >
+                            </BackgroundImage>
                         </>
                     )}  
                 } 
@@ -27,7 +34,7 @@ export default MainLogo
 export const query = graphql`{
     contentfulStickerImages(name: {eq: "logo"}) {
         image {
-            fluid(quality: 30, maxHeight: 40, maxWidth: 40) {
+            fluid(quality: 100) {
                 src
             }
         }

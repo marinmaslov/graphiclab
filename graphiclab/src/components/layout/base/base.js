@@ -20,7 +20,7 @@ const Base = ({ children, isContainer }) => {
           }}
         >
             <meta charset="utf-8"></meta>
-            <title>GraphicLab</title>
+            
             <meta name="description" content="GraphicLab a place where happiness is guaranteed!"></meta>
         </Helmet>
         <Header/>

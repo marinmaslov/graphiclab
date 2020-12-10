@@ -3,6 +3,7 @@
  */
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
+import BackgroundImage from 'gatsby-background-image'
 
 import "./carousel.css"
 
@@ -14,7 +15,13 @@ const Carousel = ({ }) => {
                 render = { data => {
                     return (
                         <>
-                            <span className={"img"} alt={ "sticker" } style={{ backgroundImage: `url(${ data.contentfulStickerImages.image.fluid.src }` }}></span>
+                            <BackgroundImage
+                                Tag="span"
+                                className={ "img" }
+                                alt={ "sticker" }
+                                fluid={ data.contentfulStickerImages.image.fluid }
+                            >
+                            </BackgroundImage>
                         </>
                     )}  
                 } 

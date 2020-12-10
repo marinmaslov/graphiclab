@@ -4,6 +4,7 @@
 import React from "react"
 import { useState } from "react"
 import { graphql } from "gatsby"
+import Helmet from "react-helmet"
 
 import useHasMounted from "../components/hooks/useHasMounted/useHasMounted"
 import Layout from "../components/layout/base/base"
@@ -58,52 +59,66 @@ const Store = ({ data }) => {
     const filtered_products = getSearchResults(query)
      
     return (
-        <Layout isContainer={false}>
-            
-            <Banner name="store" />
+        <>
+            <Helmet>
+                <title>Store - GraphicLab</title>
+            </Helmet>
+            <Layout isContainer={false}>
+                
+                <Banner name="store" />
 
-            <Categories tag="All" position="up"/>
+                <Categories tag="All" position="down"/>
 
-            <section id="store-search" className={( query && filtered_products.length > 0 ? `green` : `` ) || ( query && filtered_products.length === 0 ? `red` : `` )}>
-                <div className="search-container">
-                    <i><FontAwesomeIcon icon={ faSearch }/></i>
-                    <input  type="search" 
-                            placeholder="Searching for something particular?" 
-                            value={query || ""} 
-                            onChange={event => setQuery(event.target.value)} 
-                            className="search"
-                    />
+                
+
+                <div id="store-top">
+                    <h3>All products:</h3>
+                    <section id="store-search">
+                        <h3>Or search for something particular:</h3>
+                        <div className="search-container">
+                            <i><FontAwesomeIcon icon={ faSearch }/></i>
+                            <input  type="search" 
+                                    placeholder="Searching for something?" 
+                                    value={query || ""} 
+                                    onChange={event => setQuery(event.target.value)} 
+                                    className="search"
+                            />
+                        </div>
+                    </section>
                 </div>
-            </section>
-            
-            {query && filtered_products.length > 0 ? (
-                <section id="store-cards">
-                    <div className="products">
-                        <DisplayProducts products={ filtered_products } />
-                    </div>
-                </section>
-            ) : null}
 
-            {query && filtered_products.length === 0 ? (
-                <section id="found-result-container">
-                    <div>
-                        <p>
-                            No results for{" "}
-                            <span className="text-purple-600 font-semibold">{ query }</span>
-                        </p>
-                    </div>
-                </section>
-            ) : null}
 
-            {!query && 
-                <section id="store-cards">
-                    <div className="products">
-                        <DisplayProducts products={ products } />
-                    </div>
-                </section>
-            }
+                
 
-        </Layout>
+                {query && filtered_products.length > 0 ? (
+                    <section id="store-cards">
+                        <div className="products">
+                            <DisplayProducts products={ filtered_products } />
+                        </div>
+                    </section>
+                ) : null}
+
+                {query && filtered_products.length === 0 ? (
+                    <section id="found-result-container">
+                        <div>
+                            <p className="no-results">
+                                No results for{" "}
+                                <span className="text-purple-600 font-semibold">{ query }</span>
+                            </p>
+                        </div>
+                    </section>
+                ) : null}
+
+                {!query && 
+                    <section id="store-cards">
+                        <div className="products">
+                            <DisplayProducts products={ products } />
+                        </div>
+                    </section>
+                }
+
+            </Layout>
+        </>
     )
 }
 export default Store
@@ -117,7 +132,7 @@ export const query = graphql`{
                 name
             }
             image {
-                fluid(quality: 30, maxHeight: 300, maxWidth: 300) {
+                fluid(quality: 90, maxHeight: 300, maxWidth: 300) {
                     src
                 }
             }

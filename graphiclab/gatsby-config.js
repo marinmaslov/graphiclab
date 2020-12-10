@@ -16,6 +16,13 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: 'gatsby-background-image',
+      options: {
+        // add your own characters to escape, replacing the default ':/'
+        specialChars: '/:',
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         start_url: `/`,
@@ -52,7 +59,7 @@ module.exports = {
               depth: 3,
             },
             store: true, // In case you want to make the field available in the search results.
-          }
+          },
         ],
       },
     },

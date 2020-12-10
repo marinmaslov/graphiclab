@@ -1,4 +1,63 @@
 /* Tag ---START */
+.store-tag-margin {
+    margin-top: 6em;
+}
+
+#store-tag-page-top {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    max-width: 1146px;
+    margin: auto;
+    justify-content: space-between;
+    padding: 0 0 2em;
+}
+
+#store-tag-page-top h3 {
+    font-size: 2.2em;
+    margin: 0;
+}
+
+#store-tag-page-top h3 span {
+    color: #d4515f;
+}
+
+@media only screen and (max-width: 1250px) { 
+    #store-tag-page-top {
+        max-width: unset;
+        margin: auto 30px;
+    }
+}
+
+@media only screen and (max-width: 700px) { 
+    #store-tag-page-top {
+        flex-direction: column;
+        margin: 0 30px!important;
+    }
+    #store-tag-page-top {
+        margin: 0 auto 3em;
+    }
+    #store-tag-page-top h3:last-child {
+       font-size: 1.4em;
+    }
+    #store-tag-page-top h3 {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) { 
+    #store-tag-page-top {
+        margin: 0 0 3em;
+    }
+    #store-tag-page-top .search-container i {
+        padding: 2px 5px 2px 5px!important;
+    }
+}
+
+
+
+
+
 #store-tag-page {
     padding: 90px 20px 10px;
     text-align: center;
