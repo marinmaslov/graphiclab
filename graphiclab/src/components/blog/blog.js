@@ -28,7 +28,10 @@ export default class Blog extends React.Component {
                     <Banner name="blog" />
                 )}
 
-                <div className="blog-tag-margin"></div>
+                {!isFirst && (
+                    <div className="blog-tag-margin"></div>
+                )}
+                
                 <BlogCategories tag="All" position="down"/>
 
                 <div id="store-tag-page-top">
