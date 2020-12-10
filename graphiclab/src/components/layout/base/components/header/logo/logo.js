@@ -12,7 +12,7 @@ const MainLogo = ({ }) => {
                 render = { data => {
                     return (
                         <>
-                            <img src={ data.contentfulStickerImages.image.fluid.src } alt={ "logo" } />
+                            <span className={"logo-image"} style={{ backgroundImage: `url(${ data.contentfulStickerImages.image.fluid.src }` }}></span>
                         </>
                     )}  
                 } 
