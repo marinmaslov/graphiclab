@@ -93,6 +93,7 @@
 #header .nav .shop:hover {
     background: #d5636f;
     opacity: 1;
+    border-bottom: none!important;
 }
 
 #header .nav .login {
@@ -105,6 +106,7 @@
 #header .nav .login:hover {
     background: #d88868;
     opacity: 1;
+    border-bottom: none!important;
 }
 
 @media only screen and (max-width: 1250px) {

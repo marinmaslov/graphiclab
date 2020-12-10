@@ -159,7 +159,7 @@
 
 @media only screen and (max-width: 490px) {
     #banner .container {
-        padding: 35vh 50px 0vh!important;
+        padding: 35vh 50px 10vh!important;
     }
     #banner .container .text{
         padding: 10px 0;

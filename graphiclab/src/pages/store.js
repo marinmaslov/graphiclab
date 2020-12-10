@@ -72,7 +72,18 @@ const Store = ({ data }) => {
                 
 
                 <div id="store-top">
-                    <h3>All products:</h3>
+                    <div>
+                        {!query && 
+                            <h3>All products:</h3>
+                        }
+                        
+                        {query && filtered_products.length > 0 ? (
+                            <>
+                                <h3>Results for:</h3>
+                                <p>{query}</p>
+                            </>
+                        ) : null}
+                    </div>
                     <section id="store-search">
                         <h3>Or search for something particular:</h3>
                         <div className="search-container">

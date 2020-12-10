@@ -179,10 +179,18 @@
     opacity: .8;
 }
 
+#blog-cards article div h2 {
+    margin-top: 2em;
+}
+
+#blog-cards article div h2:first {
+    margin-top: 0;
+}
+
 #blog-cards article figure {
     max-height: 500px;
     overflow: hidden;
-    margin: 20px 0;
+    margin: 4em 0 3em;
 }
 
 #blog-cards article figure img {
@@ -190,7 +198,8 @@
 }
 
 #blog-cards article p {
-    font-size: 1.1em;
+    font-size: 1.2em;
+    line-height: 1.6em;
 }
 
 #blog-cards article button {
@@ -201,6 +210,7 @@
     font-size: 1.2em;
     color: #fff;
     cursor: pointer;
+    margin-top: 2em;
     transition: all 0.3s ease-in-out 0s;
 }
 
@@ -385,3 +395,60 @@
         padding: 30px 30px!important;
     }
 }
+
+
+.blog-tag-margin {
+    margin-top: 6em;
+}
+
+#blog-tag-page-top {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    max-width: 1146px;
+    margin: auto;
+    justify-content: space-between;
+    padding: 0 0 2em;
+}
+
+#blog-tag-page-top h3 {
+    font-size: 2.2em;
+    margin: 0;
+}
+
+#blog-tag-page-top h3 span {
+    color: #d4515f;
+}
+
+@media only screen and (max-width: 1250px) { 
+    #blog-tag-page-top {
+        max-width: unset;
+        margin: auto 30px;
+    }
+}
+
+@media only screen and (max-width: 700px) { 
+    #blog-tag-page-top {
+        flex-direction: column;
+        margin: 0 30px!important;
+    }
+    #blog-tag-page-top {
+        margin: 0 auto 3em;
+    }
+    #blog-tag-page-top h3:last-child {
+       font-size: 1.4em;
+    }
+    #blog-tag-page-top h3 {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) { 
+    #blog-tag-page-top {
+        margin: 0 0 3em;
+    }
+    #blog-tag-page-top .search-container i {
+        padding: 2px 5px 2px 5px!important;
+    }
+}
+

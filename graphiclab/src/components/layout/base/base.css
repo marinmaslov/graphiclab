@@ -30,4 +30,9 @@ p {
 a:-webkit-any-link {
     text-decoration: none;
 }
+
+::selection {
+    color: #fff;
+    background: #fd7081;
+}
 /* Base --- END */

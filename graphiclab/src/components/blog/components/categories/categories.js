@@ -6,7 +6,7 @@ import { StaticQuery, graphql } from "gatsby"
 import { Link } from "gatsby"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAnchor } from '@fortawesome/free-solid-svg-icons'
+import { faCat } from '@fortawesome/free-solid-svg-icons'
 
 const query = graphql `{
     categories: allContentfulBlogPostCategory {
@@ -24,11 +24,11 @@ const Categories = ({ tag, position }) =>  {
             query = { query }
             render = { data => {
                 return (
-                    <section id="blog-filter">
+                    <section id="store-filter">
                         {position == "up" && (
                             <div className="divider">
                                 <hr/>
-                                <i><FontAwesomeIcon icon={ faAnchor }/></i>
+                                <i><FontAwesomeIcon icon={ faCat }/></i>
                                 <hr/>
                             </div>
                         )}
@@ -49,7 +49,7 @@ const Categories = ({ tag, position }) =>  {
                         {position == "down" && (
                             <div className="divider">
                                 <hr/>
-                                <i><FontAwesomeIcon icon={ faAnchor }/></i>
+                                <i><FontAwesomeIcon icon={ faCat }/></i>
                                 <hr/>
                             </div>
                         )}

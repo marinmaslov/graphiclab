@@ -35,7 +35,12 @@ export default class Blog extends React.Component {
                     </section>
                 )}
 
-                <BlogCategories tag="All" position="up"/>
+                <BlogCategories tag="All" position="down"/>
+
+                <div id="store-tag-page-top">
+                    <h3>All posts:</h3>
+                    <h3>Page: { currentPage } / { numPages }</h3>
+                </div>
 
                     <section id="blog-cards">
                         {posts.map(({ node: article }) => {
@@ -90,7 +95,10 @@ export const query = graphql`
                         }
                     }
                     text {
-                        text
+                        raw
+                    }
+                    intro {
+                        intro
                     }
                     date
                     category {

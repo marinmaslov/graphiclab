@@ -2,7 +2,6 @@
  * Blog Cards
  */
 import React from "react"
-  
 import { Link } from "gatsby"
 
 const BlogCard = ({ article }) => {
@@ -11,7 +10,6 @@ const BlogCard = ({ article }) => {
       classNames.push(name.toLowerCase().replace(" ", "-"))
     })
 
-    const articleText = article.text.text.substring(0, 300)
 
     return (
         <article id="{article.id}" className={ classNames.join(" ") }>
@@ -26,7 +24,7 @@ const BlogCard = ({ article }) => {
                 <img src={article.image.fluid.src} alt={ "img" } />
               </Link>
             </figure>
-            <p>{articleText}...</p>
+            <p>{ article.intro.intro }</p>
             <Link key={ article.id } to={`/post/${ article.id }`} state={ article }>
               <button>Read more</button>
             </Link>
