@@ -53,7 +53,7 @@ exports.createPages = async ({ graphql, actions }) => {
     /* BLOG */
     /* BLOG PAGES */
     const posts = queries.data.allContentfulBlogPost.edges
-    const postsPerPage = 1
+    const postsPerPage = 6
     const numPages = Math.ceil(posts.length / postsPerPage)
     Array.from({ length: numPages }).forEach((_, i) => {
         createPage({
@@ -69,7 +69,7 @@ exports.createPages = async ({ graphql, actions }) => {
     })
     /* BLOG TAG PAGES */
     const allTagPosts = queries.data.allContentfulBlogPostCategory.edges
-    const tagPostsPerPage = 1
+    const tagPostsPerPage = 6
     
     allTagPosts.forEach(({ node }) => {
         const tagPosts = node.blog_post

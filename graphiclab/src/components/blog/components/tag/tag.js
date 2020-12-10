@@ -22,12 +22,14 @@ export default class BlogTag extends React.Component {
 
         return (
             <Layout>
-                <section id="blog-tag-page">
-                    <h3>The tag you're browsing is: <span>#{id}</span></h3>
-                    <h4>Page: { currentPage } / { numTagPosts }</h4>
-                </section>
+                <div className="blog-tag-margin"></div>
 
-                <BlogCategories tag={id} position="up"/>
+                <BlogCategories tag={id} position="down"/>
+
+                <div id="blog-tag-page-top">
+                    <h3>Tag <span>#{id}</span>:</h3>
+                    <h3>Page: { currentPage } / { numTagPosts }</h3>
+                </div>
                 
                 <section id="blog-cards">
                         {posts.map(({ node: article }) => {
@@ -81,7 +83,10 @@ export const query = graphql`
                         }
                     }
                     text {
-                        text
+                        raw
+                    }
+                    intro {
+                        intro
                     }
                     date
                     category {

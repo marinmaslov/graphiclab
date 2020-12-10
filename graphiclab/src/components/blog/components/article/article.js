@@ -7,10 +7,14 @@ import { graphql } from "gatsby"
 import Layout from "../../../layout/base/base"
 import { Link } from "gatsby"
 
+import { renderRichText } from "gatsby-source-contentful/rich-text"
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faNewspaper, faIceCream } from '@fortawesome/free-solid-svg-icons'
 
 export default ({ data }) => {
+
+    const json = data.contentfulBlogPost.text
 
     const preparedDate = data.contentfulBlogPost.date.split("T")[0].split("-")
 
@@ -80,7 +84,7 @@ export default ({ data }) => {
                         </figure>
                     </div>
                     <div className="post">
-                        <p>{data.contentfulBlogPost.text.text}</p>
+                        { renderRichText(json) }
                     </div>
                     
                     <div className="divider">
@@ -113,7 +117,7 @@ query($id: String!) {
             }
         }
         text {
-            text
+            raw
         }
         date
         category {
