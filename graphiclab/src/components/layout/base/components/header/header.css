@@ -30,12 +30,11 @@
     width: 40px;
     height: 40px;
     padding: 0;
-    margin: 5px 0;
 }
 
 #header .logo span {
     font-size: 1.6em;
-    padding: 5px 15px;
+    padding: 0px 15px;
     line-height: 1.6em;
 }
 
@@ -53,11 +52,17 @@
 }
 
 #header .nav ul:first-child li {
-    padding: 10px 0 10px 30px;
+    margin: 0 5px;
+    border-radius: 20px;
+    padding: 10px 0;
+}
+
+#header .nav ul:first-child li a {
+    padding: 10px 10px;
 }
 
 #header .nav ul:last-child li:first-child {
-    padding: 10px 0 10px 30px;
+    padding: 10px 0 10px 10px;
 }
 
 #header .nav ul:last-child li:last-child {
@@ -66,7 +71,6 @@
 
 #header .nav li a {
     color: #fff;
-    text-decoration: none;
     transition: all .2s ease-in-out;
 }
 
@@ -144,7 +148,11 @@
     }
 }
 
-#header [aria-current] span, #header .menu-item:hover span {
-    text-decoration: underline!important;
+#header .nav li a:hover {
+    border-bottom: 3px solid rgba(255, 255, 255, 0.8);
+}
+
+#header .nav ul:first-child li [aria-current] {
+    border-bottom: 3px solid#fff!important;
 }
 /* Header ---END */

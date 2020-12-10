@@ -52,7 +52,6 @@ footer .section {
 
 .highlight .container {
     display: flex;
-    margin: auto 150px;
     padding: 20px 0;
     justify-content: space-evenly;
 }

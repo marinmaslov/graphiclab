@@ -1,36 +1,96 @@
 /* Store ---START */
 /* Search ---START */
-#store-search {
-    background: #dbdbdb;
-    border-top: 1px solid #d1d1d1;
-    border-bottom: 1px solid #d1d1d1;
-    padding: 30px;
+#store-top {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    max-width: 1146px;
+    margin: auto;
+    justify-content: space-between;
+    padding: 0 0 2em;
 }
 
-#store-search {
-    display: flex;
-    justify-content: center;
+#store-top h3 {
+    font-size: 2.2em;
+    margin: 0;
+}
+
+@media only screen and (max-width: 1250px) { 
+    #store-top {
+        max-width: unset;
+        margin: auto 30px;
+    }
+}
+
+@media only screen and (max-width: 900px) { 
+    #store-search .search-container input {
+        font-size: 1em;
+        width: 250px;
+    }
+}
+
+@media only screen and (max-width: 700px) { 
+    #store-top {
+        flex-direction: column-reverse;
+    }
+    #store-search {
+        margin: 0 auto 3em;
+    }
+    #store-search h3 {
+        display: block!important;
+    }
+    #store-top h3 {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) { 
+    #store-search {
+        margin: 0 0 3em;
+    }
+    #store-search .search-container i {
+        padding: 2px 5px 2px 5px!important;
+    }
+}
+
+#store-search h3 {
+    font-size: 1.1em;
+    text-align: center;
+    margin: 0 0 30px 0;
+    font-weight: normal;
+    display: none;
 }
 
 #store-search .search-container {
-    width: 450px;
+    max-width: 450px;
     display: flex;
     justify-content: center;
+    border: 2px solid #e1e1e1;
+    border-radius: 20px;
+    background: #f9f9f9;
+    padding: 0 10px;
 }
 
 #store-search .search-container i {
-    font-size: 2em;
-    margin: 10px;
+    font-size: 1.3em;
+    line-height: 1.9em;
+    margin: 0 10px 0 0;
+    padding: 2px 20px 2px 5px;
+    transition: all 0.3s ease-in-out 0s;
     color: rgba(54, 61, 74, .8);
 }
 
+#store-search .search-container i:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
 #store-search .search-container input {
-    width: 450px;
     text-align: center;
-    background: none;
-    border: none;
     font-size: 1.2em;
     color: rgba(54, 61, 74, .8);
+    border: none;
+    background: none;
 }
 
 #store-search .search-container input::placeholder {
@@ -82,7 +142,11 @@
         margin-bottom: 10px!important;
     }
     #store-search .search-container input {
-        font-size: .8em!important;
+        font-size: 1em!important;
     }
+}
+
+.no-results {
+    margin: 3em 0!important;
 }
 /* Store ---END */

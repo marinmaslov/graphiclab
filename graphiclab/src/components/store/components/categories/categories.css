@@ -7,15 +7,15 @@
 }
 
 #store-filter {
-    background: #e5e5e5;
+    /* background: #e5e5e5; */
     padding: 20px 10px;
     color: #363d4a;
 }
 
 #store-filter h3 {
-    font-size: 0.9em;
+    font-size: 1.1em;
     text-align: center;
-    margin: 0;
+    margin: 20px 0 0 0;
     font-weight: normal;
 }
 
@@ -25,16 +25,16 @@
     font-size: 1em;
     font-weight: bold;
     flex-wrap: wrap;
-    padding: 30px;
+    padding: 30px 30px 0 30px;
 }
 
 #store-filter .categories a {
     margin: 0 20px;
     transition: all 0.3s ease-in-out 0s;
     cursor: pointer;
-    color: #363d4a;
+    color: #fff;
     text-decoration: none;
-    background: #d2d2d2;
+    background:#f8b195;
     padding: 5px 30px;
     border-radius: 20px;
     margin: 10px;
@@ -42,7 +42,7 @@
 
 #store-filter .categories a:hover {
     opacity: 0.8;
-    text-decoration: underline;
+    background:#f67280;
 }
 
 #store-filter .categories a:active, #store-filter .categories a:fisited {
@@ -50,13 +50,12 @@
 }
 
 #store-filter .categories .underline {
-    text-decoration: underline;
-    background: #c5c5c5;
+    background:#f67280;
 }
 
 #store-filter .divider {
     display: flex;
-    margin: 20px auto;
+    margin: 40px auto 20px;
     max-width: 300px;
 }
 
