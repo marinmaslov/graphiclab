@@ -28,13 +28,7 @@ export default class Blog extends React.Component {
                     <Banner name="blog" />
                 )}
 
-                {!isFirst && (
-                    <section id="blog-tag-page">
-                        <h3>You're browsing through all our posts</h3>
-                        <h4>Page: { currentPage } / { numPages }</h4>
-                    </section>
-                )}
-
+                <div className="blog-tag-margin"></div>
                 <BlogCategories tag="All" position="down"/>
 
                 <div id="store-tag-page-top">
@@ -84,13 +78,13 @@ export default class Blog extends React.Component {
 
 export const query = graphql`
     query($skip: Int!, $limit: Int!) {
-        allContentfulBlogPost(limit: $limit, skip: $skip) {
+        allContentfulBlogPost(limit: $limit, skip: $skip, sort: {order: DESC, fields: date}) {
             edges {
                 node {
                     id
                     title
                     image {
-                        fluid {
+                        fluid(quality: 100, maxWidth: 1200) {
                             src
                         }
                     }

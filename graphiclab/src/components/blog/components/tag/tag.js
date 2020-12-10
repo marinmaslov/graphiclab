@@ -72,13 +72,13 @@ export default class BlogTag extends React.Component {
 
 export const query = graphql`
     query($skip: Int!, $limit: Int!, $id: String!) {
-        allContentfulBlogPost(limit: $limit, skip: $skip, filter: {category: {elemMatch: {name: {eq: $id}}}}) {
+        allContentfulBlogPost(limit: $limit, skip: $skip, filter: {category: {elemMatch: {name: {eq: $id}}}}, sort: {order: DESC, fields: date}) {
             edges {
                 node {
                     id
                     title
                     image {
-                        fluid {
+                        fluid(quality: 100, maxWidth: 1200) {
                             src
                         }
                     }
