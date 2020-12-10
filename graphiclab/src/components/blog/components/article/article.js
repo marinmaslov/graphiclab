@@ -112,7 +112,7 @@ query($id: String!) {
         id
         title
         image {
-            fluid {
+            fluid(quality: 100, maxWidth: 1200) {
                 src
             }
         }

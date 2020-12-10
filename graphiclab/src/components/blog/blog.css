@@ -165,6 +165,9 @@
 #blog-cards article {
     margin: 20px 0;
     padding: 20px;
+    background: #f5f5f6;
+    border-radius: 20px;
+    margin-bottom: 4em;
 }
 
 #blog-cards article h2 a {
@@ -180,7 +183,7 @@
 }
 
 #blog-cards article div h2 {
-    margin-top: 2em;
+    margin-top: 0em;
 }
 
 #blog-cards article div h2:first {
@@ -321,7 +324,23 @@
 
 #article .article .post p{
     font-size: 1.1em;
-    text-align: justify;
+    line-height: 1.8em;
+}
+
+#article .article .post h3{
+    font-size: 2em;
+    line-height: 1.8em;
+}
+
+#article .article .post a {
+    color: #f67280;
+    text-decoration: underline;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+#article .article .post a:hover {
+    color: #000;
+    text-decoration: none;
 }
 
 #article .article .divider {
