@@ -3,7 +3,6 @@
  */
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import Img from "gatsby-image"
 
 import "./carousel.css"
 
@@ -15,8 +14,8 @@ const Carousel = ({ }) => {
                 render = { data => {
                     return (
                         <>
-                            <Img
-                                fluid={ data.contentfulStickerImages.image.fluid }
+                            <img
+                                src={ data.contentfulStickerImages.image.fluid.src }
                                 className={ "img" }
                                 alt={ "sticker" }
                             />
@@ -33,7 +32,7 @@ export default Carousel
 export const query = graphql`{
     contentfulStickerImages(name: {eq: "banner"}) {
         image {
-            fluid(quality: 30, maxHeight: 300, maxWidth: 300) {
+            fluid{
                 src
             }
         }
