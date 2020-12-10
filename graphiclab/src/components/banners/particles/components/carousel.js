@@ -14,11 +14,7 @@ const Carousel = ({ }) => {
                 render = { data => {
                     return (
                         <>
-                            <img
-                                src={ data.contentfulStickerImages.image.fluid.src }
-                                className={ "img" }
-                                alt={ "sticker" }
-                            />
+                            <span className={"img"} alt={ "sticker" } style={{ backgroundImage: `url(${ data.contentfulStickerImages.image.fluid.src }` }}></span>
                         </>
                     )}  
                 } 
