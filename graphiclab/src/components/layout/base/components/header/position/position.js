@@ -8,9 +8,15 @@ import "./position.css"
 
 const Position = ({ isVisible, parents, current, hideOnDesktop }) => {
     let path = "/"
-    let newName = current
+    let newName900 = current
+    let newName700 = current
+    let newName500 = current
+    let newName400 = current
     if(isVisible && current.length > 20) {
-        newName = current.slice(0,20) + "..."
+        newName900 = current.slice(0,20) + "..."
+        newName700 = current.slice(0,16) + "..."
+        newName500 = current.slice(0,12) + "..."
+        newName400 = current.slice(0,8) + "..."
     }
     console.log(hideOnDesktop)
     return (
@@ -30,7 +36,10 @@ const Position = ({ isVisible, parents, current, hideOnDesktop }) => {
                                         <p> / </p>  
                                     </>
                     })}                    
-                    <p className="current small-screen">{ newName }</p>
+                    <p className="current small-screen-900">{ newName900 }</p>
+                    <p className="current small-screen-700">{ newName700 }</p>
+                    <p className="current small-screen-500">{ newName500 }</p>
+                    <p className="current small-screen-400">{ newName400 }</p>
                     <p className="current big-screen">{ current }</p>
                 </div>
             </div>
