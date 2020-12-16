@@ -6,16 +6,17 @@ import { Link } from "gatsby"
 
 import "./position.css"
 
-const Position = ({ isVisible, parents, current }) => {
+const Position = ({ isVisible, parents, current, hideOnDesktop }) => {
     let path = "/"
     let newName = current
     if(isVisible && current.length > 20) {
         newName = current.slice(0,20) + "..."
     }
+    console.log(hideOnDesktop)
     return (
         <>
         { isVisible && (
-            <div id="position">
+            <div id="position" className={`hide-${ hideOnDesktop ? 'desktop' : ''}`}>
                 <div className="position-container">
                     {   
                         parents.map( parent => {

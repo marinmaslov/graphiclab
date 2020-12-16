@@ -8,7 +8,7 @@ import Img from "gatsby-image"
 const ContestCard = ({ product }) => {
     return (
         <div className="card">
-          <Link key={ product.id } to={`/store/${ product.product.id }`} aria-label={product.name} >
+          <Link key={ product.id } to={`/store/product/${ product.product.id }`} aria-label={product.name} >
             <Img
               fluid={ product.product.image.fluid }
               className={ "img" }
@@ -16,7 +16,7 @@ const ContestCard = ({ product }) => {
             />
           </Link>
           <hr/>
-          <Link key={ product.id } to={`/store/${ product.product.id }`}>
+          <Link key={ product.id } to={`/store/product/${ product.product.id }`}>
             {product.name}
           </Link>
         </div>

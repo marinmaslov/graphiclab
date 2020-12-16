@@ -23,7 +23,7 @@ export default class Blog extends React.Component {
 
         return (
             <>
-            <Layout isContainer={ false } isVisible={ true } parents={ ["Home"] } current={ "Blog" }>
+            <Layout isContainer={ false } isVisible={ true } parents={ ["Home"] } current={ "Blog" } hideOnDesktop={true}>
                 {isFirst && (
                     <Banner name="blog" />
                 )}
