@@ -62,7 +62,7 @@ export default ({ data }) => {
     }
 
     return (
-        <Layout>
+        <Layout isVisible={ true } parents={ ["Home", "Blog", "Posts"] } current={ data.contentfulBlogPost.title }>
             <div id="article">
                 <div className="author">
                     <div className="container">

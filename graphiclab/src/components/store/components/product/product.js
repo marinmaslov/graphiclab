@@ -18,7 +18,7 @@ export default ({ data }) => {
             <Helmet>
                     <title>{ data.contentfulStoreProduct.name } - GraphicLab Store</title>
             </Helmet>
-            <Layout>
+            <Layout isVisible={true} parents={ ["Home", "Store", "Product"] } current={ data.contentfulStoreProduct.name }>
                 <section id="single-product">
                     <div class="container">
                         <div class="menu">

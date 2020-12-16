@@ -20,7 +20,7 @@ const query = graphql `{
     }
 }`
 
-const Categories = ({ tag, position }) =>  {
+const Categories = ({ tag, position, toAll }) =>  {
     return (
         <StaticQuery on
             query = { query }
@@ -38,7 +38,13 @@ const Categories = ({ tag, position }) =>  {
                             <h3>Try out other tags:</h3> : <h3>Filter our products:</h3>
                         }
                         <div className="categories">
-                            <Link to={`/store/`} className={tag == "All" ? "underline" : ""}>All</Link>
+                            { toAll && (
+                                <Link to={`/store/tag/all`} className={tag == "All" ? "underline" : ""}>All</Link>
+                            )}
+
+                            { !toAll && (
+                                <Link to={`/store/`} className={tag == "All" ? "underline" : ""}>All</Link>
+                            )}
                             {data.categories.edges.map(({ node: category }) => {
                                 let isTag = false;
                                 if(tag == category.name) {

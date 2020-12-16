@@ -1,0 +1,33 @@
+#position {
+    background: #f8b195;
+}
+
+#position .position-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 5px 20px;
+    display: flex;
+}
+
+#position .position-container p, #position .position-container a {
+    margin: 0;
+    font-size: .9em;
+    color: #fff;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+#position .position-container p {
+    margin: 0 5px;
+}
+
+#position .position-container p:last-child {
+    margin: 0;
+}
+
+#position .position-container a:hover {
+    opacity: .7;
+}
+
+#position .position-container .current {
+    text-decoration: underline;
+}

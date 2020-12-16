@@ -5,7 +5,7 @@ import Banner from "../components/banners/custom/banner"
 import Container from "../components/layout/base/components/container/container"
 
 const PrivacyPolicyPage = () => (
-  <Layout isContainer={false}>
+  <Layout isContainer={false} isVisible={ true } parents={ ["Home"] } current={ "Privacy Policy" }>
     <Banner name="privacy-policy"/>
     <Container>
         <h2>Privacy Policy</h2>

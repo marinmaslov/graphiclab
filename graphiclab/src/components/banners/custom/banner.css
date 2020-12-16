@@ -42,7 +42,7 @@
 
 @media only screen and (max-width: 900px) {
     #custom-banner .text {
-        padding: 8em 4em 5em 4em!important;
+        padding: 6em 4em 3em 4em!important;
     }
     #custom-banner .text h2 {
         font-size: 2em!important;

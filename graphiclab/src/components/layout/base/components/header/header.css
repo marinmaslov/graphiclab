@@ -1,10 +1,13 @@
 /* Header ---START */
 #header {
-    background: #363d4a;
     width: 100%;
     position: fixed;
     z-index: 999;
 	top: 0;
+}
+
+#header .padding {
+    background: #363d4a;
 }
 
 #header .container {

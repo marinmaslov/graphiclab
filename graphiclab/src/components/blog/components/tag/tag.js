@@ -21,10 +21,10 @@ export default class BlogTag extends React.Component {
         const nextPage = (currentPage + 1).toString()
 
         return (
-            <Layout>
+            <Layout isVisible={ true } parents={ ["Home", "Blog" ,"Tag"] } current={ id }>
                 <div className="blog-tag-margin"></div>
 
-                <BlogCategories tag={id} position="down"/>
+                <BlogCategories tag={id} position="down" toAll="true"/>
 
                 <div id="blog-tag-page-top">
                     <h3>Tag <span>#{id}</span>:</h3>

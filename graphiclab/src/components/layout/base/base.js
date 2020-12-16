@@ -11,7 +11,7 @@ import Container from "./components/container/container"
 import Header from "./components/header/header"
 import Footer from "./components/footer/footer"
 
-const Base = ({ children, isContainer }) => {
+const Base = ({ children, isContainer, isVisible, parents, current }) => {
   return (
     <>
         <Helmet
@@ -23,7 +23,7 @@ const Base = ({ children, isContainer }) => {
             
             <meta name="description" content="GraphicLab a place where happiness is guaranteed!"></meta>
         </Helmet>
-        <Header/>
+        <Header isVisible={isVisible} parents={parents} current={current}/>
           {isContainer && (
               <Container>
               <main>
