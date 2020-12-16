@@ -29,7 +29,8 @@ const Position = ({ isVisible, parents, current }) => {
                                         <p> / </p>  
                                     </>
                     })}                    
-                    <p className="current">{ newName }</p>
+                    <p className="current small-screen">{ newName }</p>
+                    <p className="current big-screen">{ current }</p>
                 </div>
             </div>
         )}
