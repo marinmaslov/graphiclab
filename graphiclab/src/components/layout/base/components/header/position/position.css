@@ -32,20 +32,60 @@
     text-decoration: underline;
 }
 
-@media only screen and (min-width: 800px) {
-    .small-screen {
-        display: none!important;
-    }
-}
-
 @media only screen and (min-width: 960px) {
     .hide-desktop {
         display: none;
     }
 }
 
-@media only screen and (max-width: 800px) {
+.small-screen-900 {
+    display: none;
+}
+.small-screen-700 {
+    display: none;
+}
+.small-screen-500 {
+    display: none;
+}
+.small-screen-400 {
+    display: none;
+}
+.big-screen {
+    display: block;
+}
+
+@media only screen and (max-width: 700px) {
     .big-screen {
-        display: none!important;
+        display: none;
+    }
+    .small-screen-900 {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .small-screen-900 {
+        display: none;
+    }
+    .small-screen-700 {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .small-screen-700 {
+        display: none;
+    }
+    .small-screen-500 {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .small-screen-500 {
+        display: none;
+    }
+    .small-screen-400 {
+        display: block;
     }
 }
