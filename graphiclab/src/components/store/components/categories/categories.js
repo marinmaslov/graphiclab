@@ -15,6 +15,7 @@ const query = graphql `{
         edges {
             node {
                 name
+                relativePath
             }
         }
     }
@@ -51,7 +52,7 @@ const Categories = ({ tag, position, toAll }) =>  {
                                     console.log(tag + ", " + category.name);
                                     isTag = true;
                                 }
-                                return <Link key={category.name} to={`/store/tag/${category.name.replace(" ", "-").toLowerCase()}`} className={isTag ? "underline" : ""}>{category.name}</Link>
+                                return <Link key={category.name} to={`/store/tag/${category.relativePath.toLowerCase()}`} className={isTag ? "underline" : ""}>{category.name}</Link>
                             })}
                         </div>
                         {position == "down" && (

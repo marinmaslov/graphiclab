@@ -16,6 +16,7 @@ exports.createPages = async ({ graphql, actions }) => {
                     id
                     category {
                         name
+                        relativePath
                     }
                 }
             }
@@ -27,6 +28,7 @@ exports.createPages = async ({ graphql, actions }) => {
                     blog_post {
                         id
                     }
+                    relativePath
                 }
             }
         },
@@ -44,6 +46,7 @@ exports.createPages = async ({ graphql, actions }) => {
                     store_product {
                         id
                     }
+                    relativePath
                 }
             }
         }
@@ -92,7 +95,7 @@ exports.createPages = async ({ graphql, actions }) => {
         let numTagPosts = Math.ceil(tagPosts.length / tagPostsPerPage)
         Array.from({ length: numTagPosts }).forEach((_, i) => {
             createPage({
-                path: i === 0 ? `/blog/tag/` + node.name.replace(" ", "-").toLowerCase()  : `/blog/tag/` + node.name.replace(" ", "-").toLowerCase() + `/${i + 1}`,
+                path: i === 0 ? `/blog/tag/` + node.relativePath.toLowerCase()  : `/blog/tag/` + node.relativePath.toLowerCase() + `/${i + 1}`,
                 component: path.resolve("./src/components/blog/components/tag/tag.js"),
                 context: {
                     id: node.name,
@@ -131,7 +134,7 @@ exports.createPages = async ({ graphql, actions }) => {
         let numTagProducts = Math.ceil(tagProducts.length / tagProductsPerPage)
         Array.from({ length: numTagProducts }).forEach((_, i) => {
             createPage({
-                path: i === 0 ? `/store/tag/` + node.name.replace(" ", "-").toLowerCase()  : `/store/tag/` + node.name.replace(" ", "-").toLowerCase() + `/${i + 1}`,
+                path: i === 0 ? `/store/tag/` + node.relativePath.toLowerCase()  : `/store/tag/` + node.relativePath.toLowerCase() + `/${i + 1}`,
                 component: path.resolve("./src/components/store/components/tag/tag.js"),
                 context: {
                     id: node.name,

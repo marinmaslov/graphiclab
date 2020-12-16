@@ -8,6 +8,10 @@ import "./position.css"
 
 const Position = ({ isVisible, parents, current }) => {
     let path = "/"
+    let newName = current
+    if(isVisible && current.length > 20) {
+        newName = current.slice(0,20) + "..."
+    }
     return (
         <>
         { isVisible && (
@@ -24,8 +28,8 @@ const Position = ({ isVisible, parents, current }) => {
                                         </Link>
                                         <p> / </p>  
                                     </>
-                    })}
-                    <p className="current">{ current }</p>
+                    })}                    
+                    <p className="current">{ newName }</p>
                 </div>
             </div>
         )}

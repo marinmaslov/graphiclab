@@ -41,8 +41,8 @@ export default ({ data }) => {
                         <div class="categories">
                             <p>Categories:</p>
                             <div className="buttons">
-                            {data.contentfulStoreProduct.category.map(({ name: category }) => {
-                                            return  <button><Link to={"/store/tag/" + category.replace(" ", "-").toLowerCase()}>#{ category }</Link></button>
+                            {data.contentfulStoreProduct.category.map(({ name, relativePath }) => {
+                                            return  <button><Link to={"/store/tag/" + relativePath.toLowerCase()}>#{ name }</Link></button>
                             })}
                             </div>
                         </div>
@@ -69,6 +69,7 @@ query($id: String!) {
         price
         category {
             name
+            relativePath
         }
     }
 }`

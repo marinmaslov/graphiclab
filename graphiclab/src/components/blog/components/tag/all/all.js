@@ -91,6 +91,7 @@ export const query = graphql`
                     date
                     category {
                         name
+                        relativePath
                     }
                     author {
                         name

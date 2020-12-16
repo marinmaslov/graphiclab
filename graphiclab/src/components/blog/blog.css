@@ -260,7 +260,7 @@
     background: #e5e5e5;
     padding: 20px 10px;
     color: #363d4a;
-    padding: 120px 0 20px;
+    padding: 140px 0 20px;
 }
 
 #article .author .container {
@@ -408,13 +408,17 @@
         font-size: 1.5em!important;
     }
     #article .article .heading h2 {
-        font-size: 1.5em!important;
+        font-size: 1.8em!important;
     }
     #article .article {
         padding: 30px 30px!important;
     }
     #blog-cards article figure {
         margin-top: 3em;
+    }
+    #article .article .post h3{
+        font-size: 1.4em;
+        line-height: 1.5em;
     }
 }
 
@@ -474,6 +478,24 @@
     }
     #blog-tag-page-top h3 {
         margin-top: 20px;
+    }
+
+    #blog-cards article h2 a {
+        font-size: .9em!important;
+    }
+
+    #blog-cards article figure {
+        margin-top: 1em!important;
+        margin-bottom: 1em!important;
+    }
+
+    #blog-cards article p {
+        font-size: 1em;
+        line-height: 1.6em;
+    }
+
+    #blog-cards article button {
+        margin-top: .6em!important;
     }
 }
 
