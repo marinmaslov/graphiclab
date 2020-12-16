@@ -10,7 +10,7 @@ import Menu from "./menu/wide-screen/menu"
 import SmallMenu from "./menu/small-screen/menu"
 import Position from "./position/position"
 
-const Header = ({ isVisible, parents, current }) => {
+const Header = ({ isVisible, parents, current, hideOnDesktop }) => {
     return (
         <>
             <header id="header">
@@ -21,7 +21,7 @@ const Header = ({ isVisible, parents, current }) => {
                         <SmallMenu/> 
                     </div>
                 </div>
-                <Position isVisible={isVisible} parents={parents} current={current}/>
+                <Position isVisible={isVisible} parents={parents} current={current} hideOnDesktop={hideOnDesktop}/>
             </header>
         </>
     )

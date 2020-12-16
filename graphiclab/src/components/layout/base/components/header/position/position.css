@@ -38,6 +38,12 @@
     }
 }
 
+@media only screen and (min-width: 960px) {
+    .hide-desktop {
+        display: none;
+    }
+}
+
 @media only screen and (max-width: 800px) {
     .big-screen {
         display: none!important;

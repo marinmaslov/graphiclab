@@ -5,7 +5,7 @@ import Container from "../components/layout/base/components/container/container"
 import Banner from "../components/banners/custom/banner"
 
 const AboutPage = () => (
-    <Layout isContainer={false} isVisible={ true } parents={ ["Home"] } current={ "About" }>
+    <Layout isContainer={false} isVisible={ true } parents={ ["Home"] } current={ "About" } hideOnDesktop={true}>
         <Banner name="about" />
         <Container>
             <h2>About us</h2>
