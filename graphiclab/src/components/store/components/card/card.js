@@ -20,13 +20,13 @@ const StoreCard = ({ id }) => {
                                   { id === product.id &&
                                       <article id="product">
                                       <div className="container">
-                                        <Link key={ product.id } to={`/store/${ product.id }`} state={ product }> 
+                                        <Link key={ product.id } to={`/store/product/${ product.id }`} state={ product }> 
                                           <img src={ product.image.fluid.src } alt={ product.name } />
                                         </Link>
                           
                                         <hr/>
                           
-                                        <Link key={ product.id } to={`/store/${ product.id }`} state={ product }>
+                                        <Link key={ product.id } to={`/store/product/${ product.id }`} state={ product }>
                                             <h2>{product.name}</h2>
                                         </Link>
                           

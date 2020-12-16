@@ -12,7 +12,7 @@ import Map from "../components/map/map"
 export default class ContactsPage extends React.Component {
   render(){
     return(
-      <Layout isContainer={false}>
+      <Layout isContainer={false} isVisible={ true } parents={ ["Home"] } current={ "Contacts" }>
         <Banner name="contacts"/>
         <Container>
                 <h2>Contacts</h2>

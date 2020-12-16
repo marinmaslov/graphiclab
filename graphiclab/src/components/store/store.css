@@ -62,7 +62,7 @@
 }
 
 #store-search .search-container {
-    max-width: 450px;
+    max-width: 500px;
     display: flex;
     justify-content: center;
     border: 2px solid #e1e1e1;
@@ -74,7 +74,6 @@
 #store-search .search-container i {
     font-size: 1.3em;
     line-height: 1.9em;
-    margin: 0 10px 0 0;
     padding: 2px 20px 2px 5px;
     transition: all 0.3s ease-in-out 0s;
     color: rgba(54, 61, 74, .8);
@@ -91,6 +90,7 @@
     color: rgba(54, 61, 74, .8);
     border: none;
     background: none;
+    width: 300px;
 }
 
 #store-search .search-container input::placeholder {

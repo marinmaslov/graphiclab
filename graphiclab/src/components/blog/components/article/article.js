@@ -62,7 +62,7 @@ export default ({ data }) => {
     }
 
     return (
-        <Layout>
+        <Layout isVisible={ true } parents={ ["Home", "Blog", "Posts"] } current={ data.contentfulBlogPost.title }>
             <div id="article">
                 <div className="author">
                     <div className="container">
@@ -95,8 +95,8 @@ export default ({ data }) => {
                     <div class="categories">
                         <p>Tags:</p>
                         <div className="tags">
-                            {data.contentfulBlogPost.category.map(({ name: tag }) => {
-                                return  <button><Link to={"/blog/tag/" + tag.replace(" ", "-").toLowerCase()}># { tag }</Link></button>
+                            {data.contentfulBlogPost.category.map(({ name, relativePath }) => {
+                                return  <button><Link to={"/blog/tag/" + relativePath.toLowerCase()}># { name }</Link></button>
                             })}
                         </div>
                     </div>
@@ -122,6 +122,7 @@ query($id: String!) {
         date
         category {
             name
+            relativePath
         }
         author {
             name

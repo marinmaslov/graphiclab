@@ -6,16 +6,14 @@ import { useState } from "react"
 import { graphql } from "gatsby"
 import Helmet from "react-helmet"
 
-import useHasMounted from "../components/hooks/useHasMounted/useHasMounted"
-import Layout from "../components/layout/base/base"
-import Banner from "../components/banners/custom/banner"
-import Categories from "../components/store/components/categories/categories"
-import StoreCard from "../components/store/components/card/card"
+import useHasMounted from "../../../../hooks/useHasMounted/useHasMounted"
+import Layout from "../../../../layout/base/base"
+import Banner from "../../../../banners/custom/banner"
+import Categories from "../../categories/categories"
+import StoreCard from "../../card/card"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
-
-import "../components/store/store.css"
 
 function getSearchResults(query) {
     const index = window.__FLEXSEARCH__.en.index
@@ -63,13 +61,10 @@ const Store = ({ data }) => {
             <Helmet>
                 <title>Store - GraphicLab</title>
             </Helmet>
-            <Layout isContainer={false} isVisible={ true } parents={ ["Home"] } current={ "Store" }>
-                
-                <Banner name="store" />
+            <Layout isContainer={false} isVisible={ true } parents={ ["Home", "Store", "Tag"] } current={ "All" }>
+                <div className="store-tag-margin"></div>
 
                 <Categories tag="All" position="down"/>
-
-                
 
                 <div id="store-top">
                     <div>

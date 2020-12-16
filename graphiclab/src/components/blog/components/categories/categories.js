@@ -13,12 +13,13 @@ const query = graphql `{
         edges {
             node {
                 name
+                relativePath
             }
         }
     }
 }`
 
-const Categories = ({ tag, position }) =>  {
+const Categories = ({ tag, position, toAll }) =>  {
     return (
         <StaticQuery on
             query = { query }
@@ -36,14 +37,21 @@ const Categories = ({ tag, position }) =>  {
                             <h3>Try out other tags:</h3> : <h3>Filter our posts:</h3>
                         }
                         <div className="categories">
-                            <Link to={`/blog/`} className={tag == "All" ? "underline" : ""}>All</Link>
+                            { toAll && (
+                                <Link to={`/blog/tag/all/`} className={tag == "All" ? "underline" : ""}>All</Link>
+                            )}
+
+                            { !toAll && (
+                                <Link to={`/blog/`} className={tag == "All" ? "underline" : ""}>All</Link>
+                            )}
+
                             {data.categories.edges.map(({ node: category }) => {
                                 let isTag = false;
                                 if(tag == category.name) {
                                     console.log(tag + ", " + category.name);
                                     isTag = true;
                                 }
-                                return <Link key={category.name} to={`/blog/tag/${category.name.replace(" ", "-").toLowerCase()}`} className={isTag ? "underline" : ""}>{category.name}</Link>
+                                return <Link key={category.name} to={`/blog/tag/${category.relativePath.toLowerCase()}` + "/"} className={isTag ? "underline" : ""}>{category.name}</Link>
                             })}
                         </div>
                         {position == "down" && (

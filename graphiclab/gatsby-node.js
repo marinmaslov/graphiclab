@@ -16,6 +16,7 @@ exports.createPages = async ({ graphql, actions }) => {
                     id
                     category {
                         name
+                        relativePath
                     }
                 }
             }
@@ -27,6 +28,7 @@ exports.createPages = async ({ graphql, actions }) => {
                     blog_post {
                         id
                     }
+                    relativePath
                 }
             }
         },
@@ -44,6 +46,7 @@ exports.createPages = async ({ graphql, actions }) => {
                     store_product {
                         id
                     }
+                    relativePath
                 }
             }
         }
@@ -67,6 +70,22 @@ exports.createPages = async ({ graphql, actions }) => {
             },
         })
     })
+    /* BLOG TAG PAGES ALL */
+    const postsAll = queries.data.allContentfulBlogPost.edges
+    const postsPerPageAll = 6
+    const numPagesAll = Math.ceil(postsAll.length / postsPerPageAll)
+    Array.from({ length: numPagesAll }).forEach((_, i) => {
+        createPage({
+            path: i === 0 ? `/blog/tag/all` : `/blog/tag/all/${i + 1}`,
+            component: path.resolve("./src/components/blog/components/tag/all/all.js"),
+            context: {
+                limit: postsPerPageAll,
+                skip: i * postsPerPageAll,
+                numPagesAll,
+                currentPageAll: i + 1,
+            },
+        })
+    })
     /* BLOG TAG PAGES */
     const allTagPosts = queries.data.allContentfulBlogPostCategory.edges
     const tagPostsPerPage = 6
@@ -76,7 +95,7 @@ exports.createPages = async ({ graphql, actions }) => {
         let numTagPosts = Math.ceil(tagPosts.length / tagPostsPerPage)
         Array.from({ length: numTagPosts }).forEach((_, i) => {
             createPage({
-                path: i === 0 ? `/blog/tag/` + node.name.replace(" ", "-").toLowerCase()  : `/blog/tag/` + node.name.replace(" ", "-").toLowerCase() + `/${i + 1}`,
+                path: i === 0 ? `/blog/tag/` + node.relativePath.toLowerCase()  : `/blog/tag/` + node.relativePath.toLowerCase() + `/${i + 1}`,
                 component: path.resolve("./src/components/blog/components/tag/tag.js"),
                 context: {
                     id: node.name,
@@ -101,6 +120,11 @@ exports.createPages = async ({ graphql, actions }) => {
     })
 
     /* STORE */
+    /* BLOG Page */
+    createPage({
+        path: `/store/tag/all`,
+        component: path.resolve("./src/components/store/components/tag/all/all.js")
+    })
     /* STORE TAG PAGES */
     const allTagProducts = queries.data.allContentfulProductCategories.edges
     const tagProductsPerPage = 6
@@ -110,7 +134,7 @@ exports.createPages = async ({ graphql, actions }) => {
         let numTagProducts = Math.ceil(tagProducts.length / tagProductsPerPage)
         Array.from({ length: numTagProducts }).forEach((_, i) => {
             createPage({
-                path: i === 0 ? `/store/tag/` + node.name.replace(" ", "-").toLowerCase()  : `/store/tag/` + node.name.replace(" ", "-").toLowerCase() + `/${i + 1}`,
+                path: i === 0 ? `/store/tag/` + node.relativePath.toLowerCase()  : `/store/tag/` + node.relativePath.toLowerCase() + `/${i + 1}`,
                 component: path.resolve("./src/components/store/components/tag/tag.js"),
                 context: {
                     id: node.name,
@@ -125,7 +149,7 @@ exports.createPages = async ({ graphql, actions }) => {
     /* STORE PRODUCTS */
     queries.data.allContentfulStoreProduct.edges.forEach(({ node }) => {
         createPage({
-            path: '/store/' + node.id + '/',
+            path: '/store/product/' + node.id + '/',
             component: path.resolve(`./src/components/store/components/product/product.js`),
             context: {
                 id: node.id,

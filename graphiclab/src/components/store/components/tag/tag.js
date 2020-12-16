@@ -28,10 +28,10 @@ export default class BlogTag extends React.Component {
                 <Helmet>
                     <title>{id} tag - GraphicLab Store</title>
                 </Helmet>
-                <Layout>
+                <Layout isVisible={ true } parents={ ["Home", "Store", "Tag"] } current={ id }>
                     <div className="store-tag-margin"></div>
 
-                    <StoreCategories tag={id} position="down"/>
+                    <StoreCategories tag={id} position="down" toAll={true}/>
 
                     <div id="store-tag-page-top">
                         <h3>Tag <span>#{id}</span>:</h3>
