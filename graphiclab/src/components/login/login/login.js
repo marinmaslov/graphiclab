@@ -12,8 +12,6 @@ import { faUser, faLock } from '@fortawesome/free-solid-svg-icons'
 
 import "./login.css"
 
-let errorMessage = ""
-
 export default class Login extends React.Component {
     state = {
         username: ``,
@@ -45,7 +43,7 @@ export default class Login extends React.Component {
                                 <label for="password"><i><FontAwesomeIcon icon={ faLock }/></i></label>
                                 <input type="password" placeholder="password" onChange={this.handleUpdate} name="password" />
                             </div>
-                            <button type="submit" value="login" onClick={handleLogin(this.state)}>Login</button>
+                            <button type="submit" onClick={handleLogin(this.state)}>Log in</button>
                         </form>
                     </div>
                 </div>
