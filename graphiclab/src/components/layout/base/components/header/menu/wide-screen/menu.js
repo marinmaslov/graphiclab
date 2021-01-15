@@ -3,10 +3,11 @@
  */
 import React from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faShoppingCart, faUser, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
 
+import { isLoggedIn, logout  } from "../../../../../../login/services/auth"
 
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
 
 const Menu = ({ }) => {
     return (
@@ -45,9 +46,17 @@ const Menu = ({ }) => {
                         </Link>
                     </li>
                     <li>
-                        <Link className="menu-item login" to="/login/">
-                            <FontAwesomeIcon icon={ faUser }/><span>Log in</span>
-                        </Link>
+                        {isLoggedIn() ? (
+                            <Link className="menu-item login" to="/" onClick={event => {
+                                logout(() => navigate(`/logout/`))
+                            }}>
+                                <FontAwesomeIcon icon={ faSignOutAlt }/><span>Log out</span>
+                            </Link>
+                        ) : (
+                            <Link className="menu-item login" to="/login/">
+                                <FontAwesomeIcon icon={ faUser }/><span>Log in</span>
+                            </Link>
+                        )}
                     </li>
                 </ul>
             </div>

@@ -3,16 +3,17 @@
  */
 import React from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faTimes, faShoppingCart, faUser } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faTimes, faShoppingCart, faUser, faSignOutAlt } from '@fortawesome/free-solid-svg-icons'
 
-import { Link } from "gatsby"
+import { Link, navigate } from "gatsby"
+
+import { isLoggedIn, logout  } from "../../../../../../login/services/auth"
 
 import "./menu.css"
 
 export default class SmallMenu extends React.Component {
     constructor(props) {
         super(props)
-    
         this.state = {
             isOpen: false,
         }
@@ -50,9 +51,19 @@ export default class SmallMenu extends React.Component {
                         <Link className="menu-item" to="/store" onClick={() => this.closeMenu() }>
                             <p className="menu-item-element shop"><i><FontAwesomeIcon icon={ faShoppingCart }/></i><span>Store</span></p>
                         </Link>
-                        <Link className="menu-item" to="/login" onClick={() => this.closeMenu() }>
-                            <p className="menu-item-element login"><i><FontAwesomeIcon icon={ faUser }/></i><span>Login</span></p>
-                        </Link>
+                        
+                        {isLoggedIn() ? (
+                            <Link className="menu-item" to="/login" onClick={event => {
+                                this.closeMenu()
+                                logout(() => navigate(`/logout/`))
+                            }}>
+                                <p className="menu-item-element login"><i><FontAwesomeIcon icon={ faSignOutAlt }/></i><span>Log out</span></p>
+                            </Link>
+                        ) : (
+                            <Link className="menu-item" to="/login" onClick={() => this.closeMenu() }>
+                                <p className="menu-item-element login"><i><FontAwesomeIcon icon={ faUser }/></i><span>Log in</span></p>
+                            </Link>
+                        )}
                     </div>
                 </nav>
             </>

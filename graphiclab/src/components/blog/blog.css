@@ -193,7 +193,7 @@
 #blog-cards article figure {
     max-height: 500px;
     overflow: hidden;
-    margin: 4em 0 3em;
+    margin: 3em 0 3em;
 }
 
 #blog-cards article figure img {
@@ -325,6 +325,11 @@
 #article .article .post p{
     font-size: 1.1em;
     line-height: 1.8em;
+}
+
+#article .article .post h2{
+    margin-top: 30px;
+    margin-bottom: 10px;
 }
 
 #article .article .post h3{
