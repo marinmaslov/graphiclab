@@ -1,0 +1,95 @@
+#logout {
+    background: linear-gradient( 89.5deg,  rgba(246,114,128,1) 0.2%, rgba(248,177,149,1) 90.6% );
+    padding: 80px 0 0 0;
+    min-height: 80vh;
+    color: #fff;
+}
+
+
+#logout .container {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: auto;
+    justify-content: center;
+    padding: 30vh 10vh;
+    text-align: center;
+}
+
+#logout form {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#logout label {
+    font-size: 1.8em;
+    margin: 20px;
+}
+
+#logout input {
+    color: #363d4a;
+    background: #fff;
+    border: none;
+    border-radius: 20px;
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 1.4em;
+}
+
+
+
+#logout button {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 20px;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-size: 1em;
+    margin: 5px 15px;
+    border: 2px solid #fff
+}
+
+#logout button:hover {
+    background: #fff;
+    color: #363d4a;
+}
+
+#logout .container a {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px 20px;
+    border-radius: 20px;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-size: 1em;
+    margin: auto;
+    border: 2px solid #fff;
+    max-width: 300px;
+}
+
+#logout .container a:hover {
+    background: #fff;
+    color: #363d4a;
+}
+
+
+#logout .container a i {
+    margin-right: 10px;
+}
+
+
+@media only screen and (max-width: 700px) {
+    #logout label {
+        font-size: 1em;
+    }
+    
+    #logout input {
+        font-size: 1em;
+    }
+}
