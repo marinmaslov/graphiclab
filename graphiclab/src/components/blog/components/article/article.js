@@ -3,6 +3,7 @@
  */
 import React from "react"
 import { graphql } from "gatsby"
+import Helmet from "react-helmet"
 
 import Layout from "../../../layout/base/base"
 import { Link } from "gatsby"
@@ -62,47 +63,52 @@ export default ({ data }) => {
     }
 
     return (
-        <Layout isVisible={ true } parents={ ["Home", "Blog", "Posts"] } current={ data.contentfulBlogPost.title }>
-            <div id="article">
-                <div className="author">
-                    <div className="container">
-                        <img src={ data.contentfulBlogPost.author.image.fluid.src } alt={ data.contentfulBlogPost.author.name } />
-                        <p>Published by { data.contentfulBlogPost.author.name } { data.contentfulBlogPost.author.surname }</p>
+        <>
+            <Helmet>
+                <title>{ data.contentfulBlogPost.title } - GraphicLab</title>
+            </Helmet>
+            <Layout isVisible={ true } parents={ ["Home", "Blog", "Posts"] } current={ data.contentfulBlogPost.title }>
+                <div id="article">
+                    <div className="author">
+                        <div className="container">
+                            <img src={ data.contentfulBlogPost.author.image.fluid.src } alt={ data.contentfulBlogPost.author.name } />
+                            <p>Published by { data.contentfulBlogPost.author.name } { data.contentfulBlogPost.author.surname }</p>
+                            <div className="divider">
+                                <hr/>
+                                <i><FontAwesomeIcon icon={ faNewspaper }/></i>
+                                <hr/>
+                            </div>
+                            <p>on { preparedDate[1] } { preparedDate[2] }, { preparedDate[0]}</p>
+                        </div>
+                    </div>
+                    <div className="article">
+                        <div className="heading">
+                            <h2>{ data.contentfulBlogPost.title }</h2>
+                            <figure>
+                                <img src={data.contentfulBlogPost.image.fluid.src} alt={data.contentfulBlogPost.name} />
+                            </figure>
+                        </div>
+                        <div className="post">
+                            { renderRichText(json) }
+                        </div>
+                        
                         <div className="divider">
                             <hr/>
-                            <i><FontAwesomeIcon icon={ faNewspaper }/></i>
+                            <i><FontAwesomeIcon icon={ faIceCream }/></i>
                             <hr/>
                         </div>
-                        <p>on { preparedDate[1] } { preparedDate[2] }, { preparedDate[0]}</p>
-                    </div>
-                </div>
-                <div className="article">
-                    <div className="heading">
-                        <h2>{ data.contentfulBlogPost.title }</h2>
-                        <figure>
-                            <img src={data.contentfulBlogPost.image.fluid.src} alt={data.contentfulBlogPost.name} />
-                        </figure>
-                    </div>
-                    <div className="post">
-                        { renderRichText(json) }
-                    </div>
-                    
-                    <div className="divider">
-                        <hr/>
-                        <i><FontAwesomeIcon icon={ faIceCream }/></i>
-                        <hr/>
-                    </div>
-                    <div class="categories">
-                        <p>Tags:</p>
-                        <div className="tags">
-                            {data.contentfulBlogPost.category.map(({ name, relativePath }) => {
-                                return  <button><Link to={"/blog/tag/" + relativePath.toLowerCase()}># { name }</Link></button>
-                            })}
+                        <div class="categories">
+                            <p>Tags:</p>
+                            <div className="tags">
+                                {data.contentfulBlogPost.category.map(({ name, relativePath }) => {
+                                    return  <button><Link to={"/blog/tag/" + relativePath.toLowerCase()}># { name }</Link></button>
+                                })}
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </Layout>
+            </Layout>
+        </>
     )
 }
 

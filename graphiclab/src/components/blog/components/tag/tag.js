@@ -3,6 +3,7 @@
  */
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Helmet from "react-helmet"
 
 import "../../../blog/blog.css"
 import Layout from "../../../layout/base/base"
@@ -21,51 +22,56 @@ export default class BlogTag extends React.Component {
         const nextPage = (currentPage + 1).toString()
 
         return (
-            <Layout isVisible={ true } parents={ ["Home", "Blog" ,"Tag"] } current={ id }>
-                <div className="blog-tag-margin"></div>
+            <>
+                <Helmet>
+                    <title>{id} tag - GraphicLab</title>
+                </Helmet>
+                <Layout isVisible={ true } parents={ ["Home", "Blog" ,"Tag"] } current={ id }>
+                    <div className="blog-tag-margin"></div>
 
-                <BlogCategories tag={id} position="down" toAll="true"/>
+                    <BlogCategories tag={id} position="down" toAll="true"/>
 
-                <div id="blog-tag-page-top">
-                    <h3>Tag <span>#{id}</span>:</h3>
-                    <h3>Page: { currentPage } / { numTagPosts }</h3>
-                </div>
-                
-                <section id="blog-cards">
-                        {posts.map(({ node: article }) => {
-                            return <BlogCard key={ article.id } article={ article }/>
-                        })}
-                </section>
+                    <div id="blog-tag-page-top">
+                        <h3>Tag <span>#{id}</span>:</h3>
+                        <h3>Page: { currentPage } / { numTagPosts }</h3>
+                    </div>
+                    
+                    <section id="blog-cards">
+                            {posts.map(({ node: article }) => {
+                                return <BlogCard key={ article.id } article={ article }/>
+                            })}
+                    </section>
 
-                <section id="blog-pagination">
-                    <div className="previous">
-                        {!isFirst && isSecond && (
-                            <Link to={`/blog/tag/` + id.replace(" ", "-").toLowerCase() + `${prevPage}`} rel="prev">
-                                Prev
-                            </Link>
-                        )}
-                        {!isFirst && !isSecond && (
-                            <Link to={`/blog/tag/` + id.replace(" ", "-").toLowerCase() + `/${prevPage}`} rel="prev">
-                                Prev
-                            </Link>
-                        )}
-                    </div>
-                    <div className="numbering">
-                        {Array.from({ length: numTagPosts }, (_, i) => (
-                            <Link key={`pagination-number${i + 1}`} to={`/blog/tag/` + id.replace(" ", "-").toLowerCase() + `/${i === 0 ? "" : i + 1}`} className={currentPage == i + 1 ? "current-page" : ""}>
-                                {i + 1}
-                            </Link>
-                        ))}
-                    </div>
-                    <div className="next">
-                        {!isLast && (
-                            <Link to={`/blog/tag/` + id.replace(" ", "-").toLowerCase() + `/${nextPage}`} rel="next">
-                                Next
-                            </Link>
-                        )}
-                    </div>
-                </section>
-            </Layout>
+                    <section id="blog-pagination">
+                        <div className="previous">
+                            {!isFirst && isSecond && (
+                                <Link to={`/blog/tag/` + id.replace(" ", "-").toLowerCase() + `${prevPage}`} rel="prev">
+                                    Prev
+                                </Link>
+                            )}
+                            {!isFirst && !isSecond && (
+                                <Link to={`/blog/tag/` + id.replace(" ", "-").toLowerCase() + `/${prevPage}`} rel="prev">
+                                    Prev
+                                </Link>
+                            )}
+                        </div>
+                        <div className="numbering">
+                            {Array.from({ length: numTagPosts }, (_, i) => (
+                                <Link key={`pagination-number${i + 1}`} to={`/blog/tag/` + id.replace(" ", "-").toLowerCase() + `/${i === 0 ? "" : i + 1}`} className={currentPage == i + 1 ? "current-page" : ""}>
+                                    {i + 1}
+                                </Link>
+                            ))}
+                        </div>
+                        <div className="next">
+                            {!isLast && (
+                                <Link to={`/blog/tag/` + id.replace(" ", "-").toLowerCase() + `/${nextPage}`} rel="next">
+                                    Next
+                                </Link>
+                            )}
+                        </div>
+                    </section>
+                </Layout>
+            </>
         )
     }
 }
